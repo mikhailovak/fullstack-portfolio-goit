@@ -1,0 +1,166 @@
+.projects {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #00B068;
+}
+
+.my-span {
+    color: #292929;
+}
+
+.gallery-project {
+    margin: 0 auto;
+    max-width: 360px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 0;
+}
+
+.img-projects {
+    border-radius: 16px;
+    width: 320px;
+    height: 184px;
+}
+
+.info {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.technology-projects {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #292929;
+}
+
+.project-name {
+    color: #292929;
+    max-width: 320px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.visit-container {
+    margin-top: 28px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.visit-btn {
+    border-radius: 8px;
+    padding: 12px 24px;
+    width: 125px;
+    height: 48px;
+    background-color: lightgray;
+    border: 0;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #292929;
+    transition: 0.5s;
+}
+
+.visit-btn:hover {
+    background-color: gray;
+}
+
+.load-btn {
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: black;
+
+    background-color: rgba(28, 28, 28, 0);
+    border: 0;
+    transition: 0.5s;
+
+    border-bottom: 3px solid #00B068;
+}
+
+.load-btn:hover {
+    color: #00B068;
+}
+
+@media screen and (min-width: 768px) {
+    .projects {
+        font-size: 108px;
+        line-height: 115%;
+        letter-spacing: 0.02em;
+    }
+
+    .gallery-project {
+        max-width: 768px;
+        margin-top: 60px;
+        gap: 60px;
+    }
+
+    .img-projects {
+        border-radius: 24px;
+        width: 704px;
+        height: 404px;
+    }
+
+    .info {
+        margin-top: 16px;
+        gap: 20px;
+    }
+
+    .project-name {
+        max-width: 547px;
+        font-size: 36px;
+        line-height: 133%;
+        letter-spacing: 0.01em;
+    }
+
+    .visit-container {
+        margin-top: -48px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .gallery-project {
+        max-width: 1280px;
+        margin-top: 80px;
+        gap: 80px;
+    }
+
+    .img-projects {
+        width: 1008px;
+        height: 580px;
+    }
+
+    .project-name {
+        max-width: 763px;
+    }
+}
