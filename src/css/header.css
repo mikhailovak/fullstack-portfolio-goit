@@ -15,12 +15,14 @@
   padding-bottom: 16px;
 }
 
-.burger-btn {
+.burger-btn,
+.theme-btn {
   margin-left: auto;
 }
 
 @media (max-width: 767px) {
-  .header-nav-list {
+  .header-nav-list,
+  .theme-btn {
     display: none;
   }
 }
@@ -38,6 +40,17 @@
   .header-nav-list {
     display: flex;
     gap: 40px;
-    margin-left: auto;
+    margin-left: 40px;
+  }
+
+  .theme-btn {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    min-width: 48px;
+    max-height: 24px;
+
+    border-radius: 16px;
+    background: #e4e5e6;
   }
 }

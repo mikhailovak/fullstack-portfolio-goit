@@ -4,6 +4,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
 
 @font-face {
@@ -13,6 +14,7 @@ body {
 
 h1,
 h2 {
+  font-weight: 400;
   font-family: 'Impact', sans-serif;
 }
 
@@ -25,6 +27,7 @@ h3,
 }
 
 .logo {
+  font-weight: 400;
   font-family: 'Impact', sans-serif;
   line-height: 1;
 }
