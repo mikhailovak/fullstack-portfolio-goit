@@ -1,0 +1,42 @@
+@import 'https://unpkg.com/swiper/swiper/css/bundle';
+
+/* Custom styles for disabled buttons */
+.reviews-galery-prev-btn:disabled,
+.reviews-galery-next-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reviews-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23077;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+}
+
+.swiper {
+  position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  bottom: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+
+  border: 1px solid #292929;
+  border-radius: 8px;
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-prev {
+  right: 60px;
+}
