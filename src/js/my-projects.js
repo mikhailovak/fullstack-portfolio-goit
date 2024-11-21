@@ -78,7 +78,7 @@ function renderProjects(start, end) {
                 <div class="visit-container">
                     <button class="visit-btn" type="button">Visit
                         <svg class="svg-projects" width="24" height="24">
-                            <use href="/img/icons.svg#icon-arrow-diagonal"></use>
+                            <use href="img/icons.svg#icon-arrow-diagonal"></use>
                         </svg>
                     </button>
                 </div>
