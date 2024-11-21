@@ -95,6 +95,7 @@ function loadMoreProjects() {
     const end = Math.min(loadedProjects + projectsPerPage, projects.length);
     renderProjects(start, end);
     loadedProjects = end;
+
     const { height: cardHeight } = galleryProject.firstElementChild.getBoundingClientRect();
     window.scrollBy({ top: cardHeight * 1.25, behavior: "smooth" });
 
