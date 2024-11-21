@@ -69,18 +69,21 @@ function renderProjects(start, end) {
         const imgCard = document.createElement('div');
         imgCard.classList.add('gallery-project-item');
         imgCard.innerHTML = `           
-            <img src="${project.img}" alt="${project.name}" loading="lazy" class="img-projects">            
-                <div class="info">
-                    <p class="technology-projects">${project.technology}</p>
-                    <h3 class="project-name">${project.name}</h3>
-                </div>
-                
+            <img src="${project.img}" alt="${project.name}" loading="lazy" class="img-projects">           
+            <div class="info-projects">
+                <p class="technology-projects">${project.technology}</p>
+                <h3 class="project-name">${project.name}</h3>
+            </div>
             <a href="${project.img}" class="gallery-project-link">
                 <div class="visit-container">
-                    <button class="visit-btn" type="button">Visit</button>
+                    <button class="visit-btn" type="button">Visit
+                        <svg class="svg-projects" width="24" height="24">
+                            <use href="img/icons.svg#icon-arrow-diagonal"></use>
+                        </svg>
+                    </button>
                 </div>
-            </a>    
-            `;
+            </a>
+        `;
         fragment.appendChild(imgCard);
     }
 
