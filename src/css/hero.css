@@ -62,3 +62,7 @@ gap: 24px;
         align-items: baseline;
     }
 }
+
+@media (min-width: 1280px) {
+    
+}
