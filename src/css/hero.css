@@ -1,0 +1,27 @@
+
+.hero {
+    padding-top: 112px;
+}
+
+.hero-title-span {
+    color: #00b068;
+    font-weight: 400; 
+}
+
+.hero-title {
+    padding-bottom: 72px;
+    font-weight: 400;
+}
+
+.hero-div-link {
+    padding-bottom: 72px;
+}
+
+.hero-text {
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.hero-text-span {
+color: #00b068;
+}
