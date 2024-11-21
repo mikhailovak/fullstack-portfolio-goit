@@ -102,3 +102,83 @@ function loadMoreProjects() {
 loadMoreProjects();
 
 loadMoreBtn.addEventListener('click', loadMoreProjects);
+
+
+
+
+// Reviews
+
+
+
+
+import axios from 'axios';
+import Swiper from 'swiper';
+
+
+
+const reviewsGallery = document.querySelector('#reviewsGallery');
+const swiperButtonNext = document.querySelector('.swiper-button-next');
+
+let reviews = [];
+let currentReviewIndex = 0;
+let swiper;
+
+const fetchReviews = async () => {
+  try {
+    console.log('Sending request to API...');
+    const response = await axios.get('https://portfolio-js.b.goit.study/api/reviews');
+    console.log('Response data:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
+    return [];
+  }
+};
+
+const createReviewItem = ({ author, avatar_url, review }) => `
+  <div class="swiper-slide">
+    <div class="reviews-gallery-item">
+      <img src="${avatar_url}" alt="Avatar of ${author}" class="avatar">
+      <h3>${author}</h3>
+      <p>${review}</p>
+    </div>
+  </div>
+`;
+
+const loadNextReview = () => {
+  if (currentReviewIndex < reviews.length) {
+    const reviewHTML = createReviewItem(reviews[currentReviewIndex]);
+    reviewsGallery.insertAdjacentHTML('beforeend', reviewHTML);
+    if (swiper) {
+      swiper.update(); 
+    }
+    currentReviewIndex++;
+  } else {
+    swiperButtonNext.disabled = true; 
+    swiperButtonNext.classList.add('swiper-button-disabled');
+  }
+};
+
+
+
+const loadReviews = async () => {
+  if (!reviewsGallery) {
+    console.error('reviewsGallery not found in DOM');
+    return;
+  }
+
+  reviews = await fetchReviews();
+
+  if (reviews.length === 0) {
+    reviewsGallery.innerHTML = '<p>No reviews available.</p>';
+    return;
+  }
+
+  
+    loadNextReview();
+    
+  
+  swiperButtonNext.addEventListener('click', loadNextReview);
+};
+
+window.addEventListener('DOMContentLoaded', loadReviews);
