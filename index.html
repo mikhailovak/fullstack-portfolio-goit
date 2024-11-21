@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="icon" type="image/svg+xml" href="/fullstack-portfolio-goit/assets/favicon-vuQ0R6MU.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fullstack Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,18 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
       rel="stylesheet">
     <script type="module" crossorigin src="/fullstack-portfolio-goit/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/fullstack-portfolio-goit/assets/index-B-EzKcLJ.css">
+    <link rel="stylesheet" crossorigin href="/fullstack-portfolio-goit/assets/index-Vx2G2h-a.css">
   </head>
   <body>
     <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href=""></use>
+    <nav class="header-nav">
+      <a href="" class="logo header-logo">Lloyd<span class="span">Jefferson.</span></a>
+
+      <ul class="header-nav-list">
+        <li class="header-nav-item"><a href="#about-me" class="link header-nav-link">About me</a></li>
+        <li class="header-nav-item"><a href="#projects" class="link header-nav-link">Projects</a></li>
+        <li class="header-nav-item"><a href="#contacts" class="link header-nav-link">Contacts</a></li>
+      </ul>
+
+      <button type="button" class="burger-btn" id="burger-btn" data-menu-open>
+        <svg class="burger-icon" width="32" height="32">
+          <use href="../img/icons.svg#icon-burger"></use>
         </svg>
-      </a>
-      
+      </button>
+      <!-- visually-hidden -->
     </nav>
   </div>
 </header>
