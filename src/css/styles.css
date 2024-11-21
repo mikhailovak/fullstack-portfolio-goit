@@ -13,6 +13,7 @@
 /* Sections style */
 @import url('./common.css');
 @import url('./header.css');
+@import url('./header-modal.css');
 @import url('./hero.css');
 @import url('./about-me.css');
 @import url('./tech-skills.css');
