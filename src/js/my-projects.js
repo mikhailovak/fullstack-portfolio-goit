@@ -91,6 +91,7 @@ function loadMoreProjects() {
     const end = Math.min(loadedProjects + projectsPerPage, projects.length);
     renderProjects(start, end);
     loadedProjects = end;
+
     const { height: cardHeight } = galleryProject.firstElementChild.getBoundingClientRect();
     window.scrollBy({ top: cardHeight * 1.25, behavior: "smooth" });
 
@@ -99,6 +100,17 @@ function loadMoreProjects() {
     }
 }
 
-loadMoreProjects();
+function initialRender() {
+    const start = loadedProjects;
+    const end = Math.min(loadedProjects + projectsPerPage, projects.length);
+    renderProjects(start, end);
+    loadedProjects = end;
+
+    if (loadedProjects >= projects.length) {
+        loadMoreBtn.style.display = 'none';
+    }
+}
+
+initialRender();
 
 loadMoreBtn.addEventListener('click', loadMoreProjects);
