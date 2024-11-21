@@ -72,12 +72,16 @@ function renderProjects(start, end) {
             <a href="${project.img}" class="gallery-project-link">
                 <img src="${project.img}" alt="${project.name}" loading="lazy" class="img-projects">
             </a>
-            <div class="info">
+            <div class="info-projects">
                 <p class="technology-projects">${project.technology}</p>
                 <h3 class="project-name">${project.name}</h3>
             </div>
             <div class="visit-container">
-                <button class="visit-btn" type="button">Visit</button>
+                <button class="visit-btn" type="button">Visit
+                    <svg class="svg-projects" width="24" height="24">
+                        <use href="./img/icons.svg#icon-arrow-diagonal"></use>
+                    </svg>
+                </button>
             </div>
         `;
         fragment.appendChild(imgCard);
