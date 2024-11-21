@@ -68,21 +68,21 @@ function renderProjects(start, end) {
         const project = projects[i];
         const imgCard = document.createElement('div');
         imgCard.classList.add('gallery-project-item');
-        imgCard.innerHTML = `
-            <a href="${project.img}" class="gallery-project-link">
-                <img src="${project.img}" alt="${project.name}" loading="lazy" class="img-projects">
-            </a>
+        imgCard.innerHTML = `           
+            <img src="${project.img}" alt="${project.name}" loading="lazy" class="img-projects">           
             <div class="info-projects">
                 <p class="technology-projects">${project.technology}</p>
                 <h3 class="project-name">${project.name}</h3>
             </div>
-            <div class="visit-container">
-                <button class="visit-btn" type="button">Visit
-                    <svg class="svg-projects" width="24" height="24">
-                        <use href="./img/icons.svg#icon-arrow-diagonal"></use>
-                    </svg>
-                </button>
-            </div>
+            <a href="${project.img}" class="gallery-project-link">
+                <div class="visit-container">
+                    <button class="visit-btn" type="button">Visit
+                        <svg class="svg-projects" width="24" height="24">
+                            <use href="./img/icons.svg#icon-arrow-diagonal"></use>
+                        </svg>
+                    </button>
+                </div>
+            </a>
         `;
         fragment.appendChild(imgCard);
     }
@@ -103,6 +103,17 @@ function loadMoreProjects() {
     }
 }
 
-loadMoreProjects();
+function initialRender() {
+    const start = loadedProjects;
+    const end = Math.min(loadedProjects + projectsPerPage, projects.length);
+    renderProjects(start, end);
+    loadedProjects = end;
+
+    if (loadedProjects >= projects.length) {
+        loadMoreBtn.style.display = 'none';
+    }
+}
+
+initialRender();
 
 loadMoreBtn.addEventListener('click', loadMoreProjects);
