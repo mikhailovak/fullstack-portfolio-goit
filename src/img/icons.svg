@@ -20,6 +20,9 @@
             <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M24 8l-16 16"></path>
             <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M8 8l16 16"></path>
         </symbol>
+        <symbol id="icon-burger" viewBox="0 0 32 32">
+            <path d="M5.334 23.027v-1.333h21.333v1.333h-21.333zM5.334 16.667v-1.333h21.333v1.333h-21.333zM5.334 10.307v-1.333h21.333v1.333h-21.333z"></path>
+        </symbol>
         <symbol id="icon-dark" viewBox="0 0 32 32">
             <path fill="#00b068" style="fill: var(--color2, #00b068)" d="M4.8 30.669c5.651-2.469 9.6-8.108 9.6-14.669s-3.949-12.2-9.6-14.669c1.96-0.856 4.124-1.331 6.4-1.331 8.837 0 16 7.163 16 16s-7.163 16-16 16c-2.276 0-4.44-0.475-6.4-1.331z"></path>
         </symbol>
