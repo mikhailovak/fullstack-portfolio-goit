@@ -1,43 +1,36 @@
-@import 'https://unpkg.com/swiper/swiper/css/bundle';
-
-/* Custom styles for disabled buttons */
-.reviews-galery-prev-btn:disabled,
-.reviews-galery-next-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 .reviews {
   box-sizing: border-box;
   display: flex;
-  display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
+
+  min-width: 0;
 }
 
 .container {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  text-align: center;
+
   padding-left: 20px;
   padding-right: 20px;
   min-width: 0;
 }
+.reviews-title {
+  padding-bottom: 40px;
+}
 
 .swiper-slide {
   padding-bottom: 24px;
+  padding-right: 4px;
+  padding-left: 0;
 }
 
 .reviews-gallery-item {
   box-sizing: border-box;
   border-radius: 16px;
   padding: 32px;
-  width: 320px;
+  max-width: 316px;
   height: 296px;
   background-color: #e4e5e6;
   display: flex;
@@ -49,10 +42,10 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 24px;
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: #292929;
+  text-align: left;
 }
 
 .gallery-item-person {
@@ -80,10 +73,13 @@ h4 {
   align-items: center;
   justify-content: flex-end;
   gap: 16px;
+  max-width: 320px;
+  height: 40px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+div.swiper-button-prev,
+div.swiper-button-next {
+  position: static;
   border-radius: 8px;
   width: 40px;
   height: 40px;
@@ -91,6 +87,12 @@ h4 {
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  border: 2px solid #292929;
+}
+
+div.swiper-button-next:after,
+div.swiper-button-prev:after {
+  content: '';
 }
 
 .reviews-navigation-prev-icon {
@@ -100,7 +102,6 @@ h4 {
 
 .swiper-button-next {
   border: 1px solid #292929;
-  color: #000;
 }
 .reviews-navigation-icon {
   width: 24px;
@@ -150,43 +151,41 @@ h4 {
   .reviews {
     box-sizing: border-box;
     display: flex;
-    display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 0;
     padding-right: 0;
   }
 
+  .reviews-title {
+    padding-bottom: 60px;
+  }
+
   .container {
-    gap: 60px;
     padding-left: 32px;
     padding-right: 32px;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
   }
 
   .reviews-gallery-item {
     padding: 32px;
-    width: 704px;
-    height: 224px;
+    max-width: 700px;
+    max-height: 224px;
+  }
+
+  .reviews-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    max-width: 704px;
+    height: 40px;
   }
 }
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
-  .container {
-    gap: 80px;
-    padding-left: 32px;
-    padding-right: 32px;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    max-width: 1250px;
+  .reviews-title {
+    padding-bottom: 80px;
   }
 
   .swiper-slide {
@@ -196,23 +195,25 @@ h4 {
     height: 224px;
   }
 
+  .reviews-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    max-width: 1240px;
+    height: 40px;
+  }
+
   .reviews-gallery-item {
     padding: 32px;
-    width: 592px;
-    height: 224px;
+    max-width: 592px;
+    max-height: 224px;
   }
 
   .swiper-wrapper {
-    justify-content: center;
+    justify-content: start;
   }
   .reviews-navigation {
     justify-content: flex-end;
-  }
-  .swiper-slide {
-    flex: 0 0 auto;
-  }
-
-  .swiper-slide {
-    width: 50%;
   }
 }
