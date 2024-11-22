@@ -18,7 +18,7 @@
             <img src="${t}" alt="fotka" />
         </li>`)}u("beforeend",d);u("beforeend",d);function v(c,t){m.insertAdjacentHTML(c,`
         <li class="svg-test">
-        <svg class="svg-icon-test" width="24" height="24">
+        <svg class="svg-icon-test" width="20" height="20">
             <use href="${t}#icon-light"></use>
                         </svg>
         </li>`)}v("beforeend",x);
