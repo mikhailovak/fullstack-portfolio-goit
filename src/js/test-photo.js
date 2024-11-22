@@ -1,6 +1,7 @@
 import fotka from "../img/projects/project-1x-(1).jpg";
 import fotka2 from "/img/projects/project-1x-(1).jpg";
 
+import svgTest from "/img/icons.svg"
 
 const element = document.querySelector(".unordered-list-test");
 
@@ -12,12 +13,15 @@ function addTestMarkup(position, fotka) {
 }
 
 addTestMarkup("beforeend", fotka);
+addTestMarkup("beforeend", fotka2);
 
-function addTestMarkup2(position, fotka2) {
+function addTestMarkupSvg(position, svgTest) {
     element.insertAdjacentHTML(position, `
-        <li class="fotka-test">
-            <img src="${fotka2}" alt="fotka" />
+        <li class="svg-test">
+        <svg class="svg-icon-test" width="24" height="24">
+            <use href="${svgTest}#icon-light"></use>
+                        </svg>
         </li>`);
 }
 
-addTestMarkup("beforeend", fotka2);
+addTestMarkupSvg("beforeend", svgTest);
