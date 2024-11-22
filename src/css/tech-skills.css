@@ -1,0 +1,120 @@
+.tech-skills {
+  padding-bottom: 80px;
+}
+
+.tech-nav {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
+.tech-primery {
+  padding: 0;
+  max-width: 100%;
+}
+
+.tech-content {
+  max-height: 244px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+}
+
+.tech-line {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 32px 0;
+  height: 104px;
+}
+
+.tech-line-track,
+.tech-line-track-second {
+  display: flex;
+  animation: tech-move-text 10s cubic-bezier(0, 0, 1, 1) infinite;
+
+  gap: 16px;
+}
+
+.tech-line-track-second {
+  animation-direction: reverse;
+}
+
+.tech-one-background {
+  z-index: 1;
+  background-color: #bcdfd1;
+}
+
+.tech-two-background {
+  background-color: #e4e5e6;
+  transform: rotate(2deg);
+}
+
+.tech-item-one,
+.tech-item-two {
+  position: relative;
+  white-space: nowrap;
+}
+
+.tech-item-two {
+  color: #00b068;
+}
+
+.tech-item-one:not(:last-child)::after,
+.tech-item-two:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  top: 10px;
+  bottom: 10px;
+  background-color: #00b068;
+  border-radius: 2px;
+  margin-left: 16px;
+  vertical-align: middle;
+}
+
+.tech-item-two:not(:last-child)::after {
+  background-color: #292929;
+}
+
+@keyframes tech-move-text {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-33.7%);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .tech-content {
+    max-height: 280px;
+  }
+
+  .tech-content {
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.5px;
+  }
+
+  .tech-line {
+    height: 128px;
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .tech-line {
+    left: 0;
+  }
+}
