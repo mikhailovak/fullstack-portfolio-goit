@@ -11,7 +11,7 @@
   clip-path: inset(100%);
 }
 
-.tech-primery {
+.tech-primary {
   padding: 0;
   max-width: 100%;
 }
@@ -95,9 +95,6 @@
 @media only screen and (min-width: 768px) {
   .tech-content {
     max-height: 280px;
-  }
-
-  .tech-content {
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 0.5px;
