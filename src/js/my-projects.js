@@ -193,6 +193,7 @@ const loadReviews = async () => {
     },
 
     
+    
     breakpoints: {
       1200: {
         slidesPerView: 2,
