@@ -18,7 +18,7 @@ addTestMarkup("beforeend", fotka2);
 function addTestMarkupSvg(position, svgTest) {
     element.insertAdjacentHTML(position, `
         <li class="svg-test">
-        <svg class="svg-icon-test" width="24" height="24">
+        <svg class="svg-icon-test" width="20" height="20">
             <use href="${svgTest}#icon-light"></use>
                         </svg>
         </li>`);
