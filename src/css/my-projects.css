@@ -12,6 +12,11 @@
   letter-spacing: 1.8px;
   text-transform: uppercase;
   color: #00b068;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #00B068;
 }
 
 .my-span {
@@ -54,6 +59,7 @@
   color: #292929;
   max-width: 320px;
   text-transform: uppercase;
+    max-width: 320px;
 }
 
 .visit-container {
