@@ -1,43 +1,51 @@
-<section class="contacts" id="contacts">
-  <div class="contacts-container container">
-    <div class="contacts-info">
-      <h3 class="contacts-title">
+<section class="section section-together" id="contacts">
+  <div class="container work-together-container">
+    <div class="work-together-section-left">
+      <h2 class="section-title work-together-title">
         let’s
-        <span class="contacts-highlight">work together</span>
-      </h3>
-      <div class="contacts-decor"></div>
-      <p class="contacts-description">
+        <span class="span text-split letters-fade-in-random"
+          >work together</span
+        >
+      </h2>
+      <div class="work-together-decor"></div>
+      <p class="work-together-text">
         Contact me to transform your ideas into exceptional solutions.
       </p>
-      <ul class="contacts-list">
-        <li class="contacts-item">
-          <svg class="contacts-icon" width="20" height="20">
-            <use href="img/sprite.svg#icon-phone"></use>
+      <ul class="work-together-list">
+        <li class="work-together-item">
+          <!-- SVG phone -->
+          <svg class="work-together-icon" width="20" height="20">
+            <use href="../img/sprite.svg#icon-phone"></use>
           </svg>
-          <a href="tel:+380904567890" class="contacts-link"
+          <a href="tel:+380904567890" class="link-hover work-together-link"
             >+38 090 456 78 90</a
           >
         </li>
-        <li class="contacts-item">
-          <svg class="contacts-icon" width="20" height="20">
-            <use href="img/sprite.svg#icon-mail"></use>
+        <li class="work-together-item">
+          <!-- SVG mail -->
+          <svg class="work-together-icon" width="20" height="20">
+            <use href="../img/sprite.svg#icon-mail"></use>
           </svg>
-          <a href="mailto:lloydjefferson@gmail.com" class="contacts-link"
+          <a
+            href="mailto:lloydjefferson@gmail.com"
+            class="link-hover work-together-link"
             >lloydjefferson@gmail.com</a
           >
         </li>
-        <li class="contacts-item">
-          <svg class="contacts-icon" width="20" height="20">
-            <use href="img/sprite.svg#icon-location"></use>
+        <li class="work-together-item">
+          <!-- SVG location-->
+          <svg class="work-together-icon" width="20" height="20">
+            <use href="../img/sprite.svg#icon-location"></use>
           </svg>
-          <a href="#" class="contacts-link">USA, New York</a>
+          <a href="#" class="link-hover work-together-link">USA, New York</a>
         </li>
       </ul>
     </div>
-    <div class="contacts-form-container">
-      <form class="contacts-form">
+
+    <div class="work-together-section-right">
+      <form class="work-together-form">
         <input
-          class="contacts-input"
+          class="work-together-input"
           name="email"
           type="email"
           placeholder="Your email*"
@@ -46,38 +54,36 @@
           autocomplete="email"
         />
         <label for="enter-email" class="visually-hidden">Enter email</label>
-        <svg class="contacts-success-icon" width="14" height="14">
-          <use href="img/sprite.svg#icon-ep_success-filled"></use>
+        <!-- SVG success -->
+        <svg class="work-together-success" width="14" height="14">
+          <use href="../img/sprite.svg#icon-success"></use>
         </svg>
-        <p class="contacts-error contacts-error--email">
-          Invalid email, try again
-        </p>
+        <p class="work-together-errorInput">Invalid email, try again</p>
         <textarea
-          class="contacts-textarea"
+          class="work-together-message"
           name="message"
           placeholder="Message"
           minlength="10"
           id="enter-message"
         ></textarea>
         <label for="enter-message" class="visually-hidden">Enter message</label>
-        <p class="contacts-error contacts-error--message">
-          The field must be filled
-        </p>
-        <button class="contacts-submit" type="submit">SEND MESSAGE</button>
+        <p class="work-together-errorMessage">The field must be filled</p>
+        <button class="work-together-submit" type="submit">SEND MESSAGE</button>
       </form>
-      <span class="contacts-loader contacts-loader--hidden"></span>
+      <span class="work-together-loader is-hide"></span>
     </div>
-    <div class="contacts-backdrop">
-      <div class="contacts-modal">
-        <button class="contacts-modal-close">
-          <svg class="contacts-close-icon" width="24" height="24">
-            <use href="img/sprite.svg#icon-close"></use>
+    <div class="work-together-backdrop">
+      <div class="work-together-modal">
+        <button class="work-together-close">
+          <!-- SVG close -->
+          <svg class="work-together-close-icon" width="24" height="24">
+            <use href="../img/sprite.svg#icon-user"></use>
           </svg>
         </button>
-        <h3 class="contacts-modal-title">
+        <h3 class="work-together-modal-title">
           Thank you for your interest in cooperation!
         </h3>
-        <p class="contacts-modal-text">
+        <p class="work-together-modal-text">
           The manager will contact you shortly to discuss further details and
           opportunities for cooperation. Please stay in touch.
         </p>
