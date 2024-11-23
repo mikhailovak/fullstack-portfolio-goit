@@ -13,14 +13,17 @@
     visibility: hidden;
     pointer-events: none;
 
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 0ms linear 250ms;
 }
 
 .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    visibility 0ms linear;
 }
 
 .menu-modal-head {
@@ -38,12 +41,8 @@
     color: black;
 }
 
-.modal-menu-span {
-    color: #00B068;
-}
-
 .close-icon {
-    stroke: black;
+    stroke: #292929;
 }
 
 .close-button {
@@ -61,12 +60,13 @@
     flex-direction: column;
     position: relative;
     justify-content: center;
-    background-image: url(../img/mobile-background.png);
+    background-image: url(/img/mobile-background.png);
     background-repeat: no-repeat;
     max-width: 360px;
     margin: 0;
     height: 100%;
     max-height: 704px;
+    background-position: top 80px left 16px;
 }
 
 .mobile-menu-nav {
