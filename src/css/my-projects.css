@@ -1,7 +1,7 @@
 .projects {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin: 0;
-  margin-top: 80px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,11 +12,6 @@
   letter-spacing: 1.8px;
   text-transform: uppercase;
   color: #00b068;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: #00B068;
 }
 
 .svg-projects {

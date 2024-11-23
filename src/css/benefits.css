@@ -44,6 +44,7 @@
 .benefits-icon {
   fill: transparent;
   stroke: #00b068;
+    /* fill: #00b068; */
 }
 /* description */
 
@@ -67,6 +68,12 @@
   margin-bottom: 32px;
 }
 
+    .benefits-list {
+      display: flex;
+      gap: 32px;
+      flex-direction: column;
+    }
+
 /* Benefits media 768px*/
 @media screen and (min-width: 768px) {
   /* Benefits title */
@@ -82,6 +89,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
+    flex-direction: row;
   }
 
   .special-benefits-item {
