@@ -3,7 +3,6 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
 
-
 const form = document.querySelector('.work-together-form');
 const input = document.querySelector('.work-together-input');
 const message = document.querySelector('.work-together-message');
@@ -11,7 +10,6 @@ const success = document.querySelector('.work-together-success');
 const errorInput = document.querySelector('.work-together-errorInput');
 const errorMessage = document.querySelector('.work-together-errorMessage');
 const close = document.querySelector('.work-together-close');
-const backdrop = document.querySelector('.work-together-backdrop');
 const loader = document.querySelector('.work-together-loader');
 
 close.addEventListener('click', () => {
