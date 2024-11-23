@@ -15,6 +15,7 @@
   color: #292929;
   width: 217px;
   height: 64px;
+  margin-left: 2px;
 }
 
 .one-line {
@@ -26,6 +27,16 @@
   width: 320px;
   height: 374px;
   margin-top: 40px;
+}
+
+@media (min-width: 320px) and (max-width: 360px) {
+  .about-foto {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 40px auto 0;
+  }
 }
 
 .about-bio {
@@ -120,7 +131,7 @@
     height: 1388px;
   }
   .about-container {
-    width: 704px;
+    width: 768px;
     height: 1264px;
     padding: 0px 32px;
     position: relative;
@@ -198,19 +209,19 @@
   }
 
   .about-container {
-    width: 1216px;
+    width: 1280px;
     height: 1244px;
     padding: 0px 32px;
     margin: 0 auto;
     background-image: url('../img/about/about-dec-desctop.png');
-    background-position: 865px 685px;
+    background-position: 855px 685px;
   }
 
   .about-foto {
     width: 384px;
     height: 448px;
     margin-top: 312px;
-    margin-left: 230px;
+    margin-left: 210px;
   }
 
   .about-bio {
@@ -235,13 +246,13 @@
     height: 280px;
     gap: 136px;
     margin-top: 80px;
-    margin-left: 230px;
+    margin-left: 210px;
   }
   .about-educ {
     width: 384px;
   }
 
   .about-role {
-    left: 490px;
+    left: 515px;
   }
 }
