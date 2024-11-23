@@ -3,31 +3,31 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
 
-const form = document.querySelector('.work-together__form');
-const input = document.querySelector('.work-together__input');
-const message = document.querySelector('.work-together__message');
-const success = document.querySelector('.work-together__success');
-const errorInput = document.querySelector('.work-together__error-input');
-const errorMessage = document.querySelector('.work-together__error-message');
-const close = document.querySelector('.work-together__close');
-const backdrop = document.querySelector('.work-together__backdrop');
-const loader = document.querySelector('.work-together__loader');
+const form = document.querySelector('.work-together-form');
+const input = document.querySelector('.work-together-input');
+const message = document.querySelector('.work-together-message');
+const success = document.querySelector('.work-together-success');
+const errorInput = document.querySelector('.work-together-error-input');
+const errorMessage = document.querySelector('.work-together-error-message');
+const close = document.querySelector('.work-together-close');
+const backdrop = document.querySelector('.work-together-backdrop');
+const loader = document.querySelector('.work-together-loader');
 
 close.addEventListener('click', () => {
-  backdrop.classList.remove('work-together__backdrop--open');
+  backdrop.classList.remove('work-together-backdrop--open');
   document.body.style.overflow = 'auto';
 });
 
 window.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
-    backdrop.classList.remove('work-together__backdrop--open');
+    backdrop.classList.remove('work-together-backdrop--open');
     document.body.style.overflow = 'auto';
   }
 });
 
 backdrop.addEventListener('click', e => {
   if (e.target === e.currentTarget) {
-    backdrop.classList.remove('work-together__backdrop--open');
+    backdrop.classList.remove('work-together-backdrop--open');
     document.body.style.overflow = 'auto';
   }
 });
@@ -61,7 +61,7 @@ form.addEventListener('submit', e => {
   }
 
   if (input.value.trim() !== '' && message.value.trim() !== '') {
-    loader.classList.remove('work-together__loader--hide');
+    loader.classList.remove('work-together-loader--hide');
 
     axios
       .post('https://portfolio-js.b.goit.study/api/requests', {
@@ -69,13 +69,13 @@ form.addEventListener('submit', e => {
         comment: message.value,
       })
       .then(res => {
-        loader.classList.add('work-together__loader--hide');
-        backdrop.classList.add('work-together__backdrop--open');
+        loader.classList.add('work-together-loader--hide');
+        backdrop.classList.add('work-together-backdrop--open');
         elScrollBtn.classList.remove('is-active-scroll');
         document.body.style.overflow = 'hidden';
 
-        const title = document.querySelector('.work-together__modal-title');
-        const text = document.querySelector('.work-together__modal-text');
+        const title = document.querySelector('.work-together-modal-title');
+        const text = document.querySelector('.work-together-modal-text');
 
         title.textContent = res.data.title;
         text.textContent = res.data.message;
@@ -86,7 +86,7 @@ form.addEventListener('submit', e => {
         form.reset();
       })
       .catch(error => {
-        loader.classList.add('work-together__loader--hide');
+        loader.classList.add('work-together-loader--hide');
 
         iziToast.error({
           title: 'Ошибка',

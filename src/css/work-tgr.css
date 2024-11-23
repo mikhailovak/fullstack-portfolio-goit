@@ -7,7 +7,7 @@
 }
 
 .contacts-title {
-    min-width: 508px;
+    max-width: 253px;
     margin-bottom: 40px;
     text-transform: uppercase;
 }
@@ -206,4 +206,10 @@
     font-size: 16px;
     text-align: center;
     color: var(--text);
+}
+
+@media screen and (min-width: 768px) {
+    .contacts-title {
+        min-width: 507px;
+    }
 }
