@@ -6,13 +6,13 @@
 */
 /* Common styles */
 @import url('./reset.css');
-@import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
+@import url('./common.css');
 
 /* Sections style */
-@import url('./common.css');
+@import url('./svg-test.css');
 @import url('./header.css');
+@import url('./header-modal.css');
 @import url('./hero.css');
 @import url('./about-me.css');
 @import url('./tech-skills.css');

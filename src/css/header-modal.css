@@ -1,0 +1,111 @@
+.mobile-menu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.menu-modal-head {
+    display: flex;
+    align-items: center;
+}
+
+.modal-menu-logo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: black;
+}
+
+.modal-menu-span {
+    color: #00B068;
+}
+
+.close-button {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid black;
+}
+
+.mobile-menu-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    background-image: url(../img/mobile-background.png);
+    background-repeat: no-repeat;
+
+    max-width: 360px;
+    margin: 0;
+
+    height: 100%;
+    max-height: 704px;
+}
+
+.mobile-menu-nav {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.menu-nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    height: 120px;
+}
+
+.nav-menu-link {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-menu-link:hover,
+.nav-menulink:focus {
+    color: #00B068;
+}
+
+@media screen and(min-width: 361px) {
+    .mobile-menu-container {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
