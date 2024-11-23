@@ -1,0 +1,209 @@
+.contacts-container {
+    position: relative;
+}
+
+.contacts-info {
+    margin-bottom: 60px;
+}
+
+.contacts-title {
+    min-width: 508px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.contacts-highlight {
+    display: block;
+    animation: fade-in 1s ease-in-out;
+}
+
+.contacts-decor {
+    position: absolute;
+    top: -104px;
+    right: 30px;
+    width: 336px;
+    height: 260px;
+    background-repeat: no-repeat;
+}
+
+.contacts-description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    margin-bottom: 32px;
+}
+
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.contacts-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contacts-icon {
+    stroke: var(--accent-green);
+    fill: transparent;
+}
+
+.contacts-link {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--text);
+}
+
+.contacts-form-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.contacts-form {
+    display: grid;
+    position: relative;
+}
+
+.contacts-input,
+.contacts-textarea {
+    background-color: var(--light-grey);
+    border: none;
+    border-radius: 8px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+    transition: all 0.3s ease;
+    resize: none;
+    width: 100%;
+}
+
+.contacts-input:hover,
+.contacts-textarea:hover {
+    box-shadow: 1px 1px 3px rgb(169, 169, 169);
+}
+
+.contacts-input:focus,
+.contacts-textarea:focus {
+    outline: none;
+    box-shadow: 1px 1px 5px rgb(124, 124, 124);
+}
+
+.contacts-input {
+    padding: 12px;
+    margin-bottom: 32px;
+}
+
+.contacts-success-icon {
+    position: absolute;
+    right: 17px;
+    top: 17px;
+    fill: var(--accent-green);
+    display: none;
+}
+
+.contacts-textarea {
+    height: 128px;
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+.contacts-textarea::placeholder {
+    color: var(--text);
+    opacity: 0.4;
+}
+
+.contacts-submit {
+    background-color: var(--accent-green);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    height: 48px;
+    transition: all 0.4s ease;
+}
+
+.contacts-submit:hover {
+    background-color: rgba(0, 145, 86, 1);
+}
+
+.contacts-error {
+    display: none;
+    font-size: 12px;
+    color: rgba(231, 74, 59, 1);
+    margin-top: -28px;
+}
+
+.contacts-loader {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border: 5px solid var(--accent-green);
+    border-bottom-color: var(--text);
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+}
+
+.contacts-loader--hidden {
+    display: none;
+}
+
+.contacts-backdrop {
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-work-together-backdrop);
+    transition: all 0.5s ease-in;
+}
+
+.contacts-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    background-color: var(--white);
+    border: 1px solid var(--text);
+    border-radius: 16px;
+    padding: 48px 32px;
+}
+
+.contacts-modal-close {
+    background-color: transparent;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    transition: all 0.4s ease;
+}
+
+.contacts-modal-title {
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--accent-green);
+    margin-bottom: 16px;
+}
+
+.contacts-modal-text {
+    font-size: 16px;
+    text-align: center;
+    color: var(--text);
+}

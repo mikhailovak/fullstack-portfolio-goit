@@ -1,0 +1,87 @@
+<section class="contacts" id="contacts">
+  <div class="contacts-container container">
+    <div class="contacts-info">
+      <h3 class="contacts-title">
+        let’s
+        <span class="contacts-highlight">work together</span>
+      </h3>
+      <div class="contacts-decor"></div>
+      <p class="contacts-description">
+        Contact me to transform your ideas into exceptional solutions.
+      </p>
+      <ul class="contacts-list">
+        <li class="contacts-item">
+          <svg class="contacts-icon" width="20" height="20">
+            <use href="img/sprite.svg#icon-phone"></use>
+          </svg>
+          <a href="tel:+380904567890" class="contacts-link"
+            >+38 090 456 78 90</a
+          >
+        </li>
+        <li class="contacts-item">
+          <svg class="contacts-icon" width="20" height="20">
+            <use href="img/sprite.svg#icon-mail"></use>
+          </svg>
+          <a href="mailto:lloydjefferson@gmail.com" class="contacts-link"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="contacts-item">
+          <svg class="contacts-icon" width="20" height="20">
+            <use href="img/sprite.svg#icon-location"></use>
+          </svg>
+          <a href="#" class="contacts-link">USA, New York</a>
+        </li>
+      </ul>
+    </div>
+    <div class="contacts-form-container">
+      <form class="contacts-form">
+        <input
+          class="contacts-input"
+          name="email"
+          type="email"
+          placeholder="Your email*"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          id="enter-email"
+          autocomplete="email"
+        />
+        <label for="enter-email" class="visually-hidden">Enter email</label>
+        <svg class="contacts-success-icon" width="14" height="14">
+          <use href="img/sprite.svg#icon-ep_success-filled"></use>
+        </svg>
+        <p class="contacts-error contacts-error--email">
+          Invalid email, try again
+        </p>
+        <textarea
+          class="contacts-textarea"
+          name="message"
+          placeholder="Message"
+          minlength="10"
+          id="enter-message"
+        ></textarea>
+        <label for="enter-message" class="visually-hidden">Enter message</label>
+        <p class="contacts-error contacts-error--message">
+          The field must be filled
+        </p>
+        <button class="contacts-submit" type="submit">SEND MESSAGE</button>
+      </form>
+      <span class="contacts-loader contacts-loader--hidden"></span>
+    </div>
+    <div class="contacts-backdrop">
+      <div class="contacts-modal">
+        <button class="contacts-modal-close">
+          <svg class="contacts-close-icon" width="24" height="24">
+            <use href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h3 class="contacts-modal-title">
+          Thank you for your interest in cooperation!
+        </h3>
+        <p class="contacts-modal-text">
+          The manager will contact you shortly to discuss further details and
+          opportunities for cooperation. Please stay in touch.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
