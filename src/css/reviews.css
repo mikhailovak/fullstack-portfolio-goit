@@ -3,27 +3,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   min-width: 0;
 }
 
-.container {
+.reviews-container {
   box-sizing: border-box;
   display: block;
   text-align: center;
-
   padding-left: 20px;
   padding-right: 20px;
   min-width: 0;
 }
 .reviews-title {
   padding-bottom: 40px;
+  text-transform: uppercase;
 }
 
 .swiper-slide {
-  padding-bottom: 24px;
-  padding-right: 4px;
-  padding-left: 0;
+  margin-bottom: 24px;
 }
 
 .reviews-gallery-item {
@@ -31,11 +28,12 @@
   border-radius: 16px;
   padding: 32px;
   max-width: 316px;
-  height: 296px;
+  min-height: 296px;
   background-color: #e4e5e6;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  gap: 24px;
 }
 
 .reviews-gallery-txt {
@@ -70,16 +68,18 @@ h4 {
 
 .reviews-navigation {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;
   gap: 16px;
   max-width: 320px;
   height: 40px;
+  position: relative;
 }
 
 div.swiper-button-prev,
 div.swiper-button-next {
-  position: static;
+  position: absolute;
+  bottom: 0;
   border-radius: 8px;
   width: 40px;
   height: 40px;
@@ -87,7 +87,15 @@ div.swiper-button-next {
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  border: 2px solid #292929;
+  border: 1px solid #292929;
+}
+
+div.swiper-button-prev {
+  left: auto;
+  right: 56px;
+}
+div.swiper-button-next {
+  right: 0;
 }
 
 div.swiper-button-next:after,
@@ -96,30 +104,25 @@ div.swiper-button-prev:after {
 }
 
 .reviews-navigation-prev-icon {
-  width: 24px;
-  height: 24px;
+  width: 24px !important;
+  height: 24px !important;
+}
+.reviews-navigation-icon {
+  width: 24px !important;
+  height: 24px !important;
+  transform: rotate(-180deg) !important;
+  stroke-width: 2px !important;
+  stroke: #292929 !important;
 }
 
 .swiper-button-next {
   border: 1px solid #292929;
 }
-.reviews-navigation-icon {
-  width: 24px;
-  height: 24px;
-  transform: rotate(-180deg);
-  stroke-width: 2px;
-  stroke: currentColor;
-}
+
 .swiper-button-prev {
   border: 1px solid #e4e5e6;
 }
 
-.reviews-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 16px;
-}
 .swiper-button-prev,
 .swiper-button-next {
   border-radius: 8px;
@@ -145,6 +148,16 @@ div.swiper-button-prev:after {
   border: 1px solid #e4e5e6;
 }
 
+.not-found {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+  text-align: center;
+}
+
 /* Styles for Tablet devices */
 
 @media only screen and (min-width: 768px) {
@@ -161,7 +174,7 @@ div.swiper-button-prev:after {
     padding-bottom: 60px;
   }
 
-  .container {
+  .reviews-container {
     padding-left: 32px;
     padding-right: 32px;
   }
