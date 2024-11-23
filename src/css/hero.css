@@ -147,4 +147,23 @@
         display: inline-block;
         border-radius: 16px;
     }
+
+    .hero-wrapper {
+        margin-bottom: 132px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-text {
+        max-width: 592px;
+    }
+
+    .hero-div-link {
+        margin-bottom: 0;
+    }
+
+    .hero-link-element {
+        left: 62%;
+    }
 }
