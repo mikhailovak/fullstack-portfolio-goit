@@ -35,7 +35,7 @@
     height: auto;
     object-fit: contain;
     display: block;
-    margin: 0 auto;
+    margin: 40px auto 0;
   }
 }
 
