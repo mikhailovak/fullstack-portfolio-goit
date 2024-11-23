@@ -14,12 +14,14 @@
 .benefits-span-title {
   color: #00b068;
 }
-/* Benefits List */
 
-.special-benefits-item {
+/* Benefits Image */
+.benefits-background {
   display: none;
 }
+/* Benefits List */
 
+.special-benefits-item,
 .second-special-benefits-item {
   display: none;
 }
@@ -52,7 +54,7 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
 
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .benefits-description {
@@ -62,7 +64,7 @@
   line-height: 24px;
   letter-spacing: 0.5px;
 
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 /* Benefits media 768px*/
@@ -111,6 +113,15 @@
     width: 690px;
   }
 
+  /* benefits image */
+  .benefits-background {
+    display: block;
+    position: absolute;
+
+    top: -60px;
+    left: 57%;
+    width: 526px;
+  }
   /* benefits list */
   .second-special-benefits-item {
     display: block;
@@ -121,5 +132,8 @@
     position: relative;
     z-index: 1;
     padding-top: 290px;
+  }
+  .benefits-item {
+    width: 384px;
   }
 }
