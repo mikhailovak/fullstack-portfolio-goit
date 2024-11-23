@@ -138,12 +138,10 @@ div.swiper-button-prev:after {
   width: 24px;
   height: 24px;
   stroke-width: 2px;
-  stroke: currentColor;
+  stroke-width: 2px !important;
+  stroke: #292929 !important;
 }
-.swiper-button-next {
-  border: 1px solid #292929;
-  color: #000;
-}
+
 .swiper-button-prev {
   border: 1px solid #e4e5e6;
 }
@@ -229,4 +227,8 @@ div.swiper-button-prev:after {
   .reviews-navigation {
     justify-content: flex-end;
   }
+}
+
+.reviews-gallery-item {
+  min-height: 224px;
 }
