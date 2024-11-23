@@ -1,48 +1,125 @@
-.benefits-container {
-  padding-left: 20px;
-  padding-right: 20px;
+/* Title */
+
+.benefits-title-container {
+  margin-bottom: 40px;
 }
+.benefits-title,
+.benefits-span-title {
+  font-size: 52px;
+  line-height: 64px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
 .benefits-span-title {
   color: #00b068;
-
-  font-family: Impact;
-  font-size: 52px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 64px;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
 }
-.benefits-title {
-  color: #292929;
+/* Benefits List */
 
-  font-family: Impact;
-  font-size: 52px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 64px;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
+.special-benefits-item {
+  display: none;
 }
 
-.benefits-caption {
-  color: #292929;
+.second-special-benefits-item {
+  display: none;
+}
 
-  font-family: Poppins;
+/* icons */
+
+.benefits-icon-background {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #bcdfd1;
+
+  margin-bottom: 16px;
+}
+
+.benefits-icon {
+  fill: transparent;
+  stroke: #00b068;
+}
+/* description */
+
+.benefits-heading {
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-}
-.benefits-desc {
-  color: #292929;
 
-  font-family: Poppins;
+  padding-bottom: 16px;
+}
+
+.benefits-description {
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
   letter-spacing: 0.5px;
+
+  padding-bottom: 32px;
+}
+
+/* Benefits media 768px*/
+@media screen and (min-width: 768px) {
+  /* Benefits title */
+
+  .benefits-title,
+  .benefits-span-title {
+    font-size: 108px;
+    line-height: 124px;
+  }
+
+  /* benefits list */
+  .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .special-benefits-item {
+    display: block;
+    visibility: hidden;
+  }
+
+  .benefits-item {
+    width: 336px;
+  }
+
+  /* description */
+  .benefits-heading {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+/* Benefits media 1280px*/
+@media screen and (min-width: 1280px) {
+  /* benefits title */
+  .benefits-title-container {
+    position: absolute;
+    z-index: 10;
+    margin-bottom: -20px;
+  }
+
+  .benefits-title,
+  .benefits-span-title {
+    width: 690px;
+  }
+
+  /* benefits list */
+  .second-special-benefits-item {
+    display: block;
+    visibility: hidden;
+  }
+
+  .benefits-list-container {
+    position: relative;
+    z-index: 1;
+    padding-top: 290px;
+  }
 }
