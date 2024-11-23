@@ -1,0 +1,237 @@
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-impact: 'Impact', sans-serif;
+
+  --color-black: #292929;
+  --color-accent-green: #00b068;
+  --color-white: #f0f0f0;
+  --color-light-grey: #e4e5e6;
+  --color-light-accent: #bcdfd1;
+  --color-hover-green: #009156;
+  --color-error: #e74a3b;
+  --color-hover-grey: #bbbbbb;
+
+  --bg-dark: #1e2023;
+  --text-dark: #000;
+  --bg-light: #fff;
+  --text-light: #fff;
+  --accent-color: #00b068;
+
+  --background-color: black;
+  --text-color: white;
+  --button-color: white; /* Цвет кнопки */
+  --button-background-color: #1e2023; /* Фон кнопки */
+
+  /* Desktop-Tablet */
+  --h1-desktop-font-size: 136px;
+  --h1-desktop-line-height: 1.15;
+  --h1-desktop-letter-spacing: 0.013em;
+
+  --h2-desktop-font-size: 108px;
+  --h2-desktop-line-height: 1.15;
+  --h2-desktop-letter-spacing: 0.016em;
+
+  --h3-desktop-font-size: 36px;
+  --h3-desktop-line-height: 1.33;
+  --h3-desktop-letter-spacing: 0.01em;
+
+  --body1-desktop-font-size: 16px;
+  --body1-desktop-line-height: 1.5;
+  --body1-desktop-letter-spacing: 0.1em;
+
+  --body2-desktop-font-size: 20px;
+  --body2-desktop-line-height: 1.6;
+  --body2-desktop-letter-spacing: 0.025em;
+
+  /* Mobile */
+  --h1-mobile-font-size: 64px;
+  --h1-mobile-line-height: 1.25;
+  --h1-mobile-letter-spacing: 0.03em;
+
+  --h2-mobile-font-size: 52px;
+  --h2-mobile-line-height: 1.23;
+  --h2-mobile-letter-spacing: 0.03em;
+
+  --h3-mobile-font-size: 32px;
+  --h3-mobile-line-height: 1.25;
+  --h3-mobile-letter-spacing: 0.015em;
+
+  --body1-mobile-font-size: 16px;
+  --body1-mobile-line-height: 1.5;
+  --body1-mobile-letter-spacing: 0.1em;
+
+  --body2-mobile-font-size: 18px;
+  --body2-mobile-line-height: 1.55;
+  --body2-mobile-letter-spacing: 0.027em;
+}
+
+body {
+  font-family: var(--font-poppins);
+  background: var(--bg-light);
+  color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-light);
+}
+
+/* Пример того, как применять темную тему к элементам */
+.dark-theme,
+.dark-theme h1,
+.dark-theme p,
+.dark-theme .header,
+.dark-theme .header-nav,
+.dark-theme .header-logo,
+.dark-theme .header-nav-link,
+.dark-theme .about-item-education,
+.dark-theme .about-title-two,
+.dark-theme .benefits-h2,
+.dark-theme .faq-title,
+.dark-theme .ac-trigger,
+.dark-theme .work-together-title,
+.dark-theme .footer,
+.dark-theme .footer-social a,
+.dark-theme .btn-load,
+.dark-theme .icon-burger,
+.dark-theme .ac-item,
+.dark-theme .modal {
+  color: var(--text-light);
+}
+
+/* Стили для переключателя темной темы */
+.dark-theme .switch label::before {
+  background-color: var(--text-light);
+}
+
+.dark-theme .switch input:checked + label {
+  background-color: var(--background-color);
+}
+
+.dark-theme .fa-sun,
+.dark-theme .fa-moon {
+  color: var(--text-light);
+}
+
+.dark-theme .header,
+.dark-theme .header-nav,
+.dark-theme .header-logo,
+.dark-theme .header-nav-link {
+  background-color: var(--bg-dark);
+}
+
+.dark-theme .burger-btn {
+  background-color: var(--bg-dark);
+}
+
+.dark-theme .burger-icon {
+  fill: var(--color-white);
+}
+
+/* Стили для переключателя */
+.switch {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  display: flex; /* Включаем Flexbox */
+  align-items: center; /* Вертикальное выравнивание по центру */
+  justify-content: center; /* Горизонтальное выравнивание по центру */
+  margin: 0 auto;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  background-color: var(--color-light-grey);
+  border-radius: 15px;
+  width: 48px;
+  height: 24px;
+  transition: background-color 0.2s;
+  display: flex; /* Включаем Flexbox */
+  align-items: center; /* Вертикальное выравнивание по центру */
+  justify-content: center; /* Горизонтальное выравнивание по центру */
+}
+
+/* Кружок внутри переключателя */
+.switch label::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  background-color: var(--color-accent-green);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+/* Изменение фона переключателя при активном состоянии */
+.switch input:checked + label {
+  background-color: var(--background-color);
+}
+
+/* Перемещение кружка при активном состоянии */
+.switch input:checked + label::before {
+  transform: translateX(21px);
+  background-color: var(--color-accent-green);
+}
+
+/* Скрытие иконки солнца и отображение луны при активной темной теме */
+.switch input:checked + .label .fa-sun {
+  display: none;
+}
+
+.switch input:checked + .label .fa-moon {
+  display: block;
+  justify-content: flex-end;
+}
+
+/* Отображение иконки солнца и скрытие луны при неактивной темной теме */
+.switch input:not(:checked) + .label .fa-sun {
+  display: block;
+}
+
+.switch input:not(:checked) + .label .fa-moon {
+  display: none;
+}
+
+.fa-sun,
+.fa-moon {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(0.7);
+  transition: left 0.3s, right 0.3s;
+}
+
+.fa-sun {
+  left: 2.5px; /* Солнце слева по умолчанию */
+}
+
+.fa-moon {
+  right: 6px; /* Луна справа по умолчанию */
+  display: none; /* Скрыта по умолчанию */
+}
+
+#switch:checked + .label .fa-sun {
+  left: auto; /* Убираем left */
+  right: 4px; /* Перемещаем солнце вправо */
+}
+
+#switch:checked + .label .fa-moon {
+  left: 4px; /* Перемещаем луну влево */
+  right: auto; /* Убираем right */
+  display: block; /* Показываем луну */
+}
