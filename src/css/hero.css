@@ -5,17 +5,15 @@
         background-repeat: no-repeat;
             background-position: top 14px left 16px;        background-size: auto;
         padding-bottom: 40px;
+        max-width: 100%;
 }
 
-
-/* .hero-title-span {
-    color: #00b068;
-    font-weight: 400;
-} */
+.hero-avatar {
+    display: none;
+}
 
 .hero-title {
     margin-bottom: 72px;
-    /* font-weight: 400; */
     
 }
 
@@ -62,7 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
+    
     /* position: relative;
         left: 20%;
         right: 20%; */
@@ -134,4 +132,19 @@
     }
 }
 
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+    .hero {
+            padding-top: 88px;
+            position: relative;
+            background-image: url(/img/hero/hero-bg-desktop.png);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: top -3px left 37px;
+            padding-bottom: 62px;
+        }
+
+    .hero-avatar {
+        display: inline-block;
+        border-radius: 16px;
+    }
+}
