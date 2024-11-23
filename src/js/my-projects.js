@@ -1,63 +1,85 @@
 'use strict';
 
+import photo from "/img/projects/project-1x-(1).jpg";
+import src from "/img/projects/project-2x-(1).jpg";
+import photo2 from "/img/projects/project-1x-(2).jpg";
+import src2 from "/img/projects/project-2x-(2).jpg";
+import photo3 from "/img/projects/project-1x-(3).jpg";
+import src3 from "/img/projects/project-2x-(3).jpg";
+import photo4 from "/img/projects/project-1x-(4).jpg";
+import src4 from "/img/projects/project-2x-(4).jpg";
+import photo5 from "/img/projects/project-1x-(5).jpg";
+import src5 from "/img/projects/project-2x-(5).jpg";
+import photo6 from "/img/projects/project-1x-(6).jpg";
+import src6 from "/img/projects/project-2x-(6).jpg";
+import photo7 from "/img/projects/project-1x-(7).jpg";
+import src7 from "/img/projects/project-2x-(7).jpg";
+import photo8 from "/img/projects/project-1x-(8).jpg";
+import src8 from "/img/projects/project-2x-(8).jpg";
+import photo9 from "/img/projects/project-1x-(9).jpg";
+import src9 from "/img/projects/project-2x-(9).jpg";
+import photo10 from "/img/projects/project-1x-(10).jpg";
+import src10 from "/img/projects/project-2x-(10).jpg";
+import icon from "/img/icons.svg";
+
 let projects = [
     {
-        img: "img/projects/project-1x-(1).jpg",
-        srcset: "img/projects/project-1x-(1).jpg 1x, img/projects/project-2x-(1).jpg 2x",
+        img: photo,
+        srcset: src,
         technology: "React, JavaScript, Node JS, Git",
         name: "starlight studio landing page"
     },
     {
-        img: "img/projects/project-1x-(2).jpg",
-        srcset: "img/projects/project-1x-(2).jpg 1x, img/projects/project-2x-(2).jpg 2x",
+        img: photo2,
+        srcset: src2,
         technology: "React, JavaScript, Node JS, Git",
         name: "energy flow webservice"
     },
     {
-        img: "img/projects/project-1x-(3).jpg",
-        srcset: "img/projects/project-1x-(3).jpg 1x, img/projects/project-2x-(3).jpg 2x",
+        img: photo3,
+        srcset: src3,
         technology: "React, JavaScript, Node JS, Git",
         name: "fruitbox online store"
     },
     {
-        img: "img/projects/project-1x-(4).jpg",
-        srcset: "img/projects/project-1x-(4).jpg 1x, img/projects/project-2x-(4).jpg 2x",
+        img: photo4,
+        srcset: src4,
         technology: "React, JavaScript, Node JS, Git",
         name: "chego jewelry website"
     },
     {
-        img: "img/projects/project-1x-(5).jpg",
-        srcset: "img/projects/project-1x-(5).jpg 1x, img/projects/project-2x-(5).jpg 2x",
+        img: photo5,
+        srcset: src5,
         technology: "React, JavaScript, Node JS, Git",
         name: "mimino website"
     },
     {
-        img: "img/projects/project-1x-(6).jpg",
-        srcset: "img/projects/project-1x-(6).jpg 1x, img/projects/project-2x-(6).jpg 2x",
+        img: photo6,
+        srcset: src6,
         technology: "React, JavaScript, Node JS, Git",
         name: "vyshyvanka vibes Landing Page"
     },
     {
-        img: "img/projects/project-1x-(7).jpg",
-        srcset: "img/projects/project-1x-(7).jpg 1x, img/projects/project-2x-(7).jpg 2x",
+        img: photo7,
+        srcset: src7,
         technology: "React, JavaScript, Node JS, Git",
         name: "green harvest online store"
     },
     {
-        img: "img/projects/project-1x-(8).jpg",
-        srcset: "img/projects/project-1x-(8).jpg 1x, img/projects/project-2x-(8).jpg 2x",
+        img: photo8,
+        srcset: src8,
         technology: "React, JavaScript, Node JS, Git",
         name: "power pulse webservice"
     },
     {
-        img: "img/projects/project-1x-(9).jpg",
-        srcset: "img/projects/project-1x-(9).jpg 1x, img/projects/project-2x-(9).jpg 2x",
+        img: photo9,
+        srcset: src9,
         technology: "React, JavaScript, Node JS, Git",
         name: "wallet webservice"
     },
     {
-        img: "img/projects/project-1x-(10).jpg",
-        srcset: "img/projects/project-1x-(10).jpg 1x, img/projects/project-2x-(10).jpg 2x",
+        img: photo10,
+        srcset: src10,
         technology: "React, JavaScript, Node JS, Git",
         name: "English excellence webservice"
     }
@@ -79,7 +101,7 @@ function renderProjects(start, end) {
         const imgCard = document.createElement('div');
         imgCard.classList.add('gallery-project-item');
         imgCard.innerHTML = `      
-            <img src="${project.img}" srcset="${project.srcset}" alt="${project.name}" loading="lazy" class="img-projects">    
+            <img src="${project.img}" srcset="${project.img} 1x, ${project.srcset} 2x" alt="${project.name}" loading="lazy" class="img-projects">    
             <div class="info-projects">
                 <p class="technology-projects">${project.technology}</p>
                 <h3 class="project-name">${project.name}</h3>
@@ -87,8 +109,8 @@ function renderProjects(start, end) {
             <a href="${project.img}" class="gallery-project-link">
                 <div class="visit-container">
                     <button class="visit-btn" type="button">Visit
-                        <svg class="svg-projects" width="24" height="24">
-                            <use href="/img/icons.svg#icon-arrow-diagonal"></use>
+                        <svg class="svg-projects" width="22" height="22">
+                            <use href="${icon}#icon-arrow"></use>
                         </svg>
                     </button>
                 </div>
