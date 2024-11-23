@@ -13,6 +13,7 @@
   align-items: baseline;
   gap: 40px;
   flex-direction: column;
+  width: 100%;
 }
 
 .footer-content {
@@ -47,7 +48,7 @@ footer .green {
   font-weight: bold;
 }
 
-.footer-links nav {
+.footer-links ul {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -73,7 +74,7 @@ footer .green {
 
 /* ------Futer  768------- */
 @media screen and (min-width: 768px) {
-  .footer-links nav {
+  .footer-links ul {
     flex-direction: row;
     gap: 40px;
   }
