@@ -21,6 +21,7 @@
   flex-direction: column;
   gap: 32px;
   width: 100%;
+  align-items: center;
 }
 
 .footer-logo h2 {
