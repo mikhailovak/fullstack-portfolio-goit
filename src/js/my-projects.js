@@ -106,11 +106,11 @@ function renderProjects(start, end) {
                 <p class="technology-projects">${project.technology}</p>
                 <h3 class="project-name">${project.name}</h3>
             </div>
-            <a href="${project.img}" class="gallery-project-link">
+            <a href="https://mikhailovak.github.io/fullstack-portfolio-goit/" class="gallery-project-link">
                 <div class="visit-container">
                     <button class="visit-btn" type="button">Visit
                         <svg class="svg-projects" width="22" height="22">
-                            <use href="${icon}#icon-arrow"></use>
+                        <use href="${icon}#icon-arrow-diagonal"></use>
                         </svg>
                     </button>
                 </div>
