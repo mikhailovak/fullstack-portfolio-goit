@@ -264,13 +264,25 @@ body.dark-theme {
   background-color: #2a2d32; /* Фон меняется на #2a2d32 при включенной темной теме */
 }
 
-body.dark-theme .tech-item-one,
-body.dark-theme .tech-item-two {
+.dark-theme .tech-one-background {
+  z-index: 1;
+  background-color: #204136;
+}
+
+.dark-theme .tech-two-background {
+  z-index: 1;
+  background-color: #2a2d32;
+}
+
+.dark-theme .tech-item-one {
   color: #f0f0f0; /* Белый цвет текста */
 }
 
-body.dark-theme .tech-item-one:not(:last-child)::after,
-body.dark-theme .tech-item-two:not(:last-child)::after {
+.dark-theme .tech-item-two {
+  color: #14c57c;
+}
+
+.dark-theme .tech-item-two:not(:last-child)::after {
   background-color: #f0f0f0;
 }
 
@@ -321,22 +333,6 @@ body.dark-theme .tech-item-two:not(:last-child)::after {
   background: #2a2d32;
 }
 
-/* .dark-theme .reviews-navigation-prev-icon {
-  fill: #f0f0f0;
-}
-
-.dark-theme .reviews-navigation-icon {
-  fill: #f0f0f0;
-}
-
-.dark-theme .swiper-button-prev {
-  border: 1px solid #f0f0f0;
-}
-
-.dark-theme .swiper-button-next {
-  border: 1px solid #f0f0f0;
-} */
-
 /* WORK-TRG */
 .dark-theme .work-together-link {
   color: currentColor;
@@ -358,3 +354,23 @@ body.dark-theme .tech-item-two:not(:last-child)::after {
 .dark-theme .bold {
   color: currentColor;
 }
+
+/* MOBILE MENU */
+
+.dark-theme .mobile-menu-container {
+  background-color: #1e2023;
+}
+
+/* .dark-theme .mobile-menu {
+  align-items: center;
+}
+.dark-theme .modal-menu-head {
+  color: #f0f0f0;
+}
+.dark-theme .header-logo {
+  color: #f0f0f0;
+}
+
+.dark-theme .close-button {
+  color: #f0f0f0;
+} */
