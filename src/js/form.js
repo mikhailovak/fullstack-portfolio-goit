@@ -1,6 +1,4 @@
 'use strict';
-showModal();
-
 import axios from 'axios';
 import iziToast from 'izitoast';
 
@@ -51,6 +49,7 @@ input.addEventListener('input', checkEmail);
 form.addEventListener('submit', e => {
   e.preventDefault();
 
+
   if (input.value.trim() === '') {
     errorInput.style.display = 'block';
     errorInput.textContent = 'the field must be filled';
@@ -74,7 +73,7 @@ form.addEventListener('submit', e => {
         loader.classList.add('is-hide');
         // backdrop.classList.add('is-open');
         // Відкриваємо модальне вікно
-        
+        showModal();
         elScrollBtn.classList.remove('is-active-scroll');
         document.body.style.overflow = 'hidden';
 
@@ -87,7 +86,9 @@ form.addEventListener('submit', e => {
         errorInput.style.display = 'none';
         errorMessage.style.display = 'none';
         success.style.display = 'none';
+        
         form.reset();
+         
       })
       .catch(error => {
         loader.classList.add('is-hide');

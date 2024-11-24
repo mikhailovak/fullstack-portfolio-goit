@@ -3,6 +3,7 @@ import './js/my-projects';
 import './js/reviews';
 import './js/header.modal';
 import './js/faq'
-import './js/form.js';
 import './js/modal.js';
-showModal();
+import './js/form.js';
+
+

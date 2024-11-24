@@ -12,7 +12,8 @@ function closeModal() {
   modalOverlay.classList.remove('active');
 }
 
-
+// Відкриваємо модальне вікно 
+showModal();
 
 // Додаємо подію на закриття
 modalCloseBtn.addEventListener('click', closeModal);
