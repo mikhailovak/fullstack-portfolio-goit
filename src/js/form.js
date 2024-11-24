@@ -1,4 +1,5 @@
 'use strict';
+showModal();
 
 import axios from 'axios';
 import iziToast from 'izitoast';
@@ -45,6 +46,8 @@ const checkEmail = () => {
 
 input.addEventListener('input', checkEmail);
 
+
+
 form.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -69,7 +72,9 @@ form.addEventListener('submit', e => {
       })
       .then(res => {
         loader.classList.add('is-hide');
-        backdrop.classList.add('is-open');
+        // backdrop.classList.add('is-open');
+        // Відкриваємо модальне вікно
+        
         elScrollBtn.classList.remove('is-active-scroll');
         document.body.style.overflow = 'hidden';
 
