@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    display: flex; /* Включаємо Flexbox для центрування */
+    display: none; /* Включаємо Flexbox для центрування */
     align-items: center; /* Вирівнювання по вертикалі */
     justify-content: center; /* Вирівнювання по горизонталі */
     z-index: 1000;
