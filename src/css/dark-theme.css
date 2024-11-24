@@ -264,6 +264,16 @@ body.dark-theme {
   background-color: #2a2d32; /* Фон меняется на #2a2d32 при включенной темной теме */
 }
 
+body.dark-theme .tech-item-one,
+body.dark-theme .tech-item-two {
+  color: #f0f0f0; /* Белый цвет текста */
+}
+
+body.dark-theme .tech-item-one:not(:last-child)::after,
+body.dark-theme .tech-item-two:not(:last-child)::after {
+  background-color: #f0f0f0;
+}
+
 /* MY PROJECT */
 .dark-theme .project-text {
   color: #00b068;
@@ -310,6 +320,23 @@ body.dark-theme {
 .dark-theme .reviews-gallery-item {
   background: #2a2d32;
 }
+
+/* .dark-theme .reviews-navigation-prev-icon {
+  fill: #f0f0f0;
+}
+
+.dark-theme .reviews-navigation-icon {
+  fill: #f0f0f0;
+}
+
+.dark-theme .swiper-button-prev {
+  border: 1px solid #f0f0f0;
+}
+
+.dark-theme .swiper-button-next {
+  border: 1px solid #f0f0f0;
+} */
+
 /* WORK-TRG */
 .dark-theme .work-together-link {
   color: currentColor;
