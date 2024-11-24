@@ -1,3 +1,11 @@
+.header {
+  background-color: rgba(255, 255, 255, 1);
+  position: fixed;
+  top: 0; /* Располагаем хедер в верхней части окна */
+  width: 100%; /* Занимаем всю ширину окна */
+  z-index: 1000; /* Устанавливаем z-index для перекрытия других элементов */
+}
+
 .header-nav {
   display: flex;
   align-items: center;

@@ -12,7 +12,6 @@
   --color-error: #e74a3b;
   --color-hover-grey: #bbbbbb;
 
-  --bg-dark: #1e2023;
   --text-dark: #000;
   --bg-light: #fff;
   --text-light: #fff;
@@ -22,6 +21,10 @@
   --text-color: white;
   --button-color: white; /* Цвет кнопки */
   --button-background-color: #1e2023; /* Фон кнопки */
+
+  --hero-link-color: #00b068; /* Определите переменную цвета */
+  --placeholder-color: #292929;
+  --dark-placeholder-color: #f0f0f0;
 
   /* Desktop-Tablet */
   --h1-desktop-font-size: 136px;
@@ -79,13 +82,18 @@ body {
 }
 
 body.dark-theme {
-  background-color: var(--background-color);
+  background-color: #1e2023;
   color: var(--text-light);
 }
 
 /* Пример того, как применять темную тему к элементам */
 .dark-theme,
 .dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
 .dark-theme p,
 .dark-theme .header,
 .dark-theme .header-nav,
@@ -124,7 +132,8 @@ body.dark-theme {
 .dark-theme .header-nav,
 .dark-theme .header-logo,
 .dark-theme .header-nav-link {
-  background-color: var(--bg-dark);
+  /* background-color: var(--bg-dark); */
+  background-color: #1e2023;
 }
 
 .dark-theme .burger-btn {
@@ -217,7 +226,7 @@ body.dark-theme {
 }
 
 .fa-sun {
-  left: 2.5px; /* Солнце слева по умолчанию */
+  left: 2px; /* Солнце слева по умолчанию */
 }
 
 .fa-moon {
@@ -234,4 +243,91 @@ body.dark-theme {
   left: 4px; /* Перемещаем луну влево */
   right: auto; /* Убираем right */
   display: block; /* Показываем луну */
+}
+
+/* HERO */
+.dark-theme .hero-link-element {
+  background-color: var(--hero-link-color);
+}
+
+.hero-soc-links-container {
+  padding: 32px 0px;
+  background-color: #e4e5e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.dark-theme .hero-soc-links-container {
+  background-color: #2a2d32; /* Фон меняется на #2a2d32 при включенной темной теме */
+}
+
+/* MY PROJECT */
+.dark-theme .project-text {
+  color: #00b068;
+}
+.dark-theme .my-span {
+  color: #e4e5e6;
+}
+
+.dark-theme .visit-btn {
+  color: #e4e5e6;
+}
+
+.dark-theme .load-btn-projects {
+  color: #e4e5e6;
+}
+
+.dark-theme .visit-btn {
+  background: #2a2d32;
+}
+
+/* BENEFITS */
+.dark-theme .benefits-icon-background {
+  background: #204136;
+}
+
+/* faq */
+
+.dark-theme .faq-item.is-active {
+  background: #204136;
+}
+
+.dark-theme .faq-item-title {
+  color: #f0f0f0;
+}
+
+.dark-theme .ac {
+  background-color: transparent;
+}
+.dark-theme .arrow-icon {
+  stroke: #f0f0f0;
+}
+
+/* REVIEWS */
+.dark-theme .reviews-gallery-item {
+  background: #2a2d32;
+}
+/* WORK-TRG */
+.dark-theme .work-together-link {
+  color: currentColor;
+}
+
+.dark-theme .work-together-input {
+  background: #2a2d32;
+}
+.dark-theme .work-together-message {
+  background: #2a2d32;
+}
+
+.dark-theme .work-together-input::placeholder,
+.dark-theme .work-together-message::placeholder {
+  color: var(--dark-placeholder-color);
+}
+
+/* footer */
+.dark-theme .bold {
+  color: currentColor;
 }
