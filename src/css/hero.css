@@ -32,7 +32,7 @@
 .hero-link-element {
   min-width: 165px;
   height: 92px;
-  background-color: #bcdfd1;
+  background: #bcdfd1;
   border-radius: 16px;
   position: absolute;
   left: 45%;
@@ -69,7 +69,6 @@
   justify-content: center;
   align-items: center;
   gap: 24px;
-
 }
 
 @media (min-width: 768px) {

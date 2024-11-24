@@ -1,15 +1,21 @@
 <header class="header">
   <div class="container">
     <nav class="header-nav">
-      <a href="" class="logo header-logo"
-        >Lloyd<span class="span">Jefferson.</span></a
-      >
+      <a href="" class="logo header-logo">Lloyd<span class="span">Jefferson.</span></a>
 
-      <button type="button" class="theme-btn" id="theme-btn" data-toggle-theme>
+      <div class="switch">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="label">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </label>
+      </div>
+
+      <!-- <button type="button" class="theme-btn" id="theme-btn" data-toggle-theme>
         <svg class="theme-icon" width="20" height="20">
           <use href="./img/icons.svg#icon-light"></use>
         </svg>
-      </button>
+      </button> -->
 
       <ul class="header-nav-list">
         <li class="header-nav-item">
