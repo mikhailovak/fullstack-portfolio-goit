@@ -264,6 +264,14 @@ body.dark-theme {
   background-color: #2a2d32; /* Фон меняется на #2a2d32 при включенной темной теме */
 }
 
+@media (min-width: 768px) {
+  .dark-theme a {
+    color: #f0f0f0;
+  }
+}
+
+/* tech skills */
+
 .dark-theme .tech-one-background {
   z-index: 1;
   background-color: #204136;
