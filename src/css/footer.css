@@ -21,7 +21,7 @@
   flex-direction: column;
   gap: 32px;
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footer-logo h2 {
@@ -90,5 +90,6 @@ footer .green {
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
