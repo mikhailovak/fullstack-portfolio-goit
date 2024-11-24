@@ -1,103 +1,129 @@
-'use strict';
-import axios from 'axios';
-import iziToast from 'izitoast';
+// DOM Elements: отримання посилань на елементи з HTML
+const form = document.querySelector('.work-together-form'); // форма
+const input = document.querySelector('.work-together-input'); // поле для вводу email
+const message = document.querySelector('.work-together-message'); // поле для вводу повідомлення
+const success = document.querySelector('.work-together-success'); // повідомлення про успіх
+const errorInput = document.querySelector('.work-together-errorInput'); // помилка для поля email
+const errorMessage = document.querySelector('.work-together-errorMessage'); // помилка для поля повідомлення
+const close = document.querySelector('.work-together-close'); // кнопка закриття модального вікна
+const loader = document.querySelector('.work-together-loader'); // індикатор завантаження
+const backdrop = document.querySelector('.work-together-backdrop'); // фон модального вікна
+const modalTitle = document.querySelector('.work-together-modal-title'); // заголовок модального вікна
+const modalText = document.querySelector('.work-together-modal-text'); // текст у модальному вікні
 
-const form = document.querySelector('.work-together-form');
-const input = document.querySelector('.work-together-input');
-const message = document.querySelector('.work-together-message');
-const success = document.querySelector('.work-together-success');
-const errorInput = document.querySelector('.work-together-errorInput');
-const errorMessage = document.querySelector('.work-together-errorMessage');
-const close = document.querySelector('.work-together-close');
-const loader = document.querySelector('.work-together-loader');
+// Відкриває/закриває модальне вікно
+const toggleModal = isOpen => {
+  backdrop.classList.toggle('is-open', isOpen); // додає/видаляє клас is-open
+  document.body.style.overflow = isOpen ? 'hidden' : 'auto'; // блокує/розблоковує прокрутку сторінки
+};
 
-close.addEventListener('click', () => {
-  backdrop.classList.remove('is-open');
-  document.body.style.overflow = 'auto';
-});
+// Показує повідомлення про помилку
+const showError = (element, message = '') => {
+  element.style.display = 'block'; // робить елемент видимим
+  element.textContent = message; // додає текст помилки
+};
 
-window.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    backdrop.classList.remove('is-open');
-    document.body.style.overflow = 'auto';
-  }
-});
+// Приховує повідомлення про помилку
+const hideError = element => {
+  element.style.display = 'none'; // робить елемент невидимим
+};
 
-backdrop.addEventListener('click', e => {
-  if (e.target === e.currentTarget) {
-    backdrop.classList.remove('is-open');
-    document.body.style.overflow = 'auto';
-  }
-});
+// Відображає або приховує індикатор завантаження
+const toggleLoader = isLoading => {
+  loader.classList.toggle('is-hide', !isLoading); // перемикає клас is-hide
+};
 
-const checkEmail = () => {
-  if (input.validity.valid) {
-    success.style.display = 'block';
-    errorInput.style.display = 'none';
+// Скидає стан форми до початкового
+const resetForm = () => {
+  form.reset(); // очищає поля форми
+  hideError(errorInput); // приховує помилку email
+  hideError(errorMessage); // приховує помилку повідомлення
+  success.style.display = 'none'; // приховує повідомлення про успіх
+};
+
+// Перевіряє валідність введеного email
+const validateEmail = () => {
+  const isValid = input.validity.valid && input.value.trim() !== ''; // перевіряє формат і наявність тексту
+  success.style.display = isValid ? 'block' : 'none'; // показує успішну валідацію, якщо email валідний
+  if (!isValid && input.value.trim() === '') {
+    showError(errorInput, 'The field must be filled.'); // показує помилку, якщо поле порожнє
   } else {
-    success.style.display = 'none';
-  }
-  if (input.value === '') {
-    success.style.display = 'none';
+    hideError(errorInput); // приховує помилку
   }
 };
 
-input.addEventListener('input', checkEmail);
+// Обробляє введення у полі email
+input.addEventListener('input', validateEmail);
 
+// Закриває модальне вікно при кліку на кнопку закриття
+close.addEventListener('click', () => toggleModal(false));
 
+// Закриває модальне вікно при натисканні Escape
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && backdrop.classList.contains('is-open')) {
+    toggleModal(false);
+  }
+});
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
+// Закриває модальне вікно при кліку на фон (backdrop)
+backdrop.addEventListener('click', e => {
+  if (e.target === backdrop) toggleModal(false);
+});
 
+// Обробка події надсилання форми
+form.addEventListener('submit', async e => {
+  e.preventDefault(); // запобігає перезавантаженню сторінки
 
-  if (input.value.trim() === '') {
-    errorInput.style.display = 'block';
-    errorInput.textContent = 'the field must be filled';
+  const email = input.value.trim(); // отримує введений email
+  const comment = message.value.trim(); // отримує введене повідомлення
+
+  let hasError = false;
+
+  // Перевірка на порожнє поле email
+  if (!email) {
+    showError(errorInput, 'The field must be filled.');
+    hasError = true;
   }
 
-  if (message.value.trim() === '') {
-    errorMessage.style.display = 'block';
-  } else {
-    errorMessage.style.display = 'none';
+  // Перевірка на порожнє поле повідомлення
+  if (!comment) {
+    showError(errorMessage, 'Message cannot be empty.');
+    hasError = true;
   }
 
-  if (input.value.trim() !== '' && message.value.trim() !== '') {
-    loader.classList.remove('is-hide');
+  if (hasError) return; // якщо є помилки, виходить із функції
 
-    axios
-      .post('https://portfolio-js.b.goit.study/api/requests', {
-        email: input.value,
-        comment: message.value,
-      })
-      .then(res => {
-        loader.classList.add('is-hide');
-        // backdrop.classList.add('is-open');
-        // Відкриваємо модальне вікно
-        showModal();
-        elScrollBtn.classList.remove('is-active-scroll');
-        document.body.style.overflow = 'hidden';
+  toggleLoader(true); // показує індикатор завантаження
 
-        const title = document.querySelector('.work-together-modal-title');
-        const text = document.querySelector('.work-together-modal-text');
+  try {
+    // Відправляє POST-запит на сервер
+    const response = await fetch(
+      'https://portfolio-js.b.goit.study/api/requests',
+      {
+        method: 'POST', // метод запиту
+        headers: {
+          'Content-Type': 'application/json', // формат даних
+        },
+        body: JSON.stringify({ email, comment }), // тіло запиту у форматі JSON
+      }
+    );
 
-        title.textContent = res.data.title;
-        text.textContent = res.data.message;
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`); // генерує помилку, якщо відповідь не успішна
+    }
 
-        errorInput.style.display = 'none';
-        errorMessage.style.display = 'none';
-        success.style.display = 'none';
-        
-        form.reset();
-         
-      })
-      .catch(error => {
-        loader.classList.add('is-hide');
+    const data = await response.json(); // отримує дані з відповіді
 
-        iziToast.error({
-          title: 'Error',
-          message: error.message,
-          position: 'center',
-        });
-      });
+    toggleLoader(false); // приховує індикатор завантаження
+    toggleModal(true); // відкриває модальне вікно
+
+    modalTitle.textContent = data?.title || 'Success'; // оновлює заголовок модального вікна
+    modalText.textContent =
+      data?.message || 'Your message has been sent successfully!'; // оновлює текст у модальному вікні
+    resetForm(); // скидає форму
+  } catch (error) {
+    toggleLoader(false); // приховує індикатор завантаження
+
+    alert(`Error: ${error.message}`); // показує повідомлення про помилку
   }
 });
