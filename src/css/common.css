@@ -56,6 +56,14 @@ h3,
   overflow: hidden;
 }
 
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+  display: flex;
+}
+
 h1 {
   font-size: 64px;
   line-height: 1.25;

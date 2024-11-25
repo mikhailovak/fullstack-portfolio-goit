@@ -86,6 +86,7 @@ body.dark-theme {
   color: var(--text-light);
 }
 
+
 /* Пример того, как применять темную тему к элементам */
 .dark-theme,
 .dark-theme h1,
@@ -134,6 +135,11 @@ body.dark-theme {
 .dark-theme .header-nav-link {
   /* background-color: var(--bg-dark); */
   background-color: #1e2023;
+}
+
+.dark-theme .mobile-menu {
+  background-color: #1e2023;
+  /* Фон для мобільного меню в темній темі */
 }
 
 .dark-theme .burger-btn {

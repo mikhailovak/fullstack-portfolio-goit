@@ -1,3 +1,7 @@
+'use strict';
+import axios from 'axios';
+import iziToast from 'izitoast';
+
 // DOM Elements: отримання посилань на елементи з HTML
 const form = document.querySelector('.work-together-form'); // форма
 const input = document.querySelector('.work-together-input'); // поле для вводу email
@@ -5,17 +9,19 @@ const message = document.querySelector('.work-together-message'); // поле д
 const success = document.querySelector('.work-together-success'); // повідомлення про успіх
 const errorInput = document.querySelector('.work-together-errorInput'); // помилка для поля email
 const errorMessage = document.querySelector('.work-together-errorMessage'); // помилка для поля повідомлення
-const close = document.querySelector('.work-together-close'); // кнопка закриття модального вікна
+const close = document.querySelector('.modal-close-btn'); // кнопка закриття модального вікна
 const loader = document.querySelector('.work-together-loader'); // індикатор завантаження
-const backdrop = document.querySelector('.work-together-backdrop'); // фон модального вікна
-const modalTitle = document.querySelector('.work-together-modal-title'); // заголовок модального вікна
-const modalText = document.querySelector('.work-together-modal-text'); // текст у модальному вікні
+const backdrop = document.querySelector('.modal-overlay'); // фон модального вікна
+const modalTitle = document.querySelector('.modal-title'); // заголовок модального вікна
+const modalText = document.querySelector('.modal-message'); // текст у модальному вікні
+const modalCloseBtn = document.getElementById('modal-close-btn');
 
 // Відкриває/закриває модальне вікно
 const toggleModal = isOpen => {
-  backdrop.classList.toggle('is-open', isOpen); // додає/видаляє клас is-open
-  document.body.style.overflow = isOpen ? 'hidden' : 'auto'; // блокує/розблоковує прокрутку сторінки
+  backdrop.classList.toggle('active', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : 'auto';
 };
+
 
 // Показує повідомлення про помилку
 const showError = (element, message = '') => {

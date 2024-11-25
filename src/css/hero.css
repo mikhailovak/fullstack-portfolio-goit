@@ -1,9 +1,9 @@
 .hero {
-  padding-top: 112px;
+  padding-top: 176px;
   position: relative;
   background-image: url(/img/mobile-background.png);
   background-repeat: no-repeat;
-  background-position: top 14px left 16px;
+  background-position: top 80px left 16px;
   background-size: auto;
   padding-bottom: 40px;
   max-width: 100%;
@@ -73,7 +73,7 @@
 
 @media (min-width: 768px) {
   .hero {
-    padding-top: 88px;
+    padding-top: 184px;
     position: relative;
     background-image: url(/img/hero/hero-bg-tablet.png);
     background-repeat: no-repeat;
