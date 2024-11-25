@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fullstack Portfolio</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-        integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="module" crossorigin src="/fullstack-portfolio-goit/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/fullstack-portfolio-goit/assets/vendor-BEDm_njw.js">
-    <link rel="stylesheet" crossorigin href="/fullstack-portfolio-goit/assets/vendor-vixjBPHE.css">
-    <link rel="stylesheet" crossorigin href="/fullstack-portfolio-goit/assets/index-gUNIuQ9S.css">
-  </head>
-  <body>
-    <header class="header">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fullstack Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- подключил изображение солнца и луны (dark theme) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" crossorigin src="/fullstack-portfolio-goit/index.js"></script>
+  <link rel="modulepreload" crossorigin href="/fullstack-portfolio-goit/assets/vendor-BEDm_njw.js">
+  <link rel="stylesheet" crossorigin href="/fullstack-portfolio-goit/assets/vendor-vixjBPHE.css">
+  <link rel="stylesheet" crossorigin href="/fullstack-portfolio-goit/assets/index-CJUXwID5.css">
+</head>
+
+<body>
+  <header class="header">
   <div class="container">
     <nav class="header-nav">
-      <a href="" class="logo header-logo"
-        >Lloyd<span class="span">Jefferson.</span></a
-      >
+      <a href="" class="logo header-logo">Lloyd<span class="span">Jefferson.</span></a>
 
-      <button type="button" class="theme-btn" id="theme-btn" data-toggle-theme>
+      <div class="switch">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="label">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </label>
+      </div>
+
+      <!-- <button type="button" class="theme-btn" id="theme-btn" data-toggle-theme>
         <svg class="theme-icon" width="20" height="20">
-          <use href="/fullstack-portfolio-goit/assets/icons-BMAn3I_a.svg#icon-light"></use>
+          <use href="./img/icons.svg#icon-light"></use>
         </svg>
-      </button>
+      </button> -->
 
       <ul class="header-nav-list">
         <li class="header-nav-item">
@@ -52,8 +65,7 @@
     </nav>
   </div>
 </header>
-
-    <div class="mobile-menu" data-menu>
+  <div class="mobile-menu" data-menu>
     <div class="mobile-menu-container container">
         <div class="menu-modal-head">
             <a href="./index.html" class="logo header-logo">Lloyd<span class="span">Jefferson.</span></a>
@@ -74,10 +86,10 @@
     </div>
 </div>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      
-      <section class="section hero">
+  <main>
+    <!-- Loads the specified .html file -->
+
+    <section class="section hero">
     <div class="container hero-container">
         <h1 class="hero-title">Hello, I am <picture>
             <source srcset="/fullstack-portfolio-goit/assets/hero-avatar-1x-DNCxrtJ6.jpg 1x, /fullstack-portfolio-goit/assets/hero-avatar-2x-DOmy9dBD.jpg 2x" type="image/jpeg">
@@ -106,7 +118,7 @@
                 </ul>
     </div>
 </section>
-      <section class="about-section section" id="about-me">
+    <section class="about-section section" id="about-me">
   <div class="container about-container">
     <h2 class="about-title">ABOUT <span class="one-line">ME</span></h2>
 
@@ -194,7 +206,7 @@
   </div>
 </section>
 
-      <section class="tech-skills section">
+    <section class="tech-skills section">
     <div class="container tech-primary">
         <h2 class="tech-nav">Tech Skills</h2>
         <div class="tech-content">
@@ -240,17 +252,17 @@
         </div>
     </div>
 </section>
-      <section class="my-projects-container section " id="Projects">
+    <section class="my-projects-container section " id="Projects">
     <div class="container">
-        <h2 class="projects"><span class="my-span">MY</span>PROJECTS</h2>
+        <h2 class="projects"><span class="my-span">MY</span><span class="project-text">PROJECTS</span></h2>
+
         <ul class="gallery-project" id="gallery-project">
-    
+
         </ul>
         <button type="button" class="load-btn-projects" id="loadMoreBtn">LOAD MORE</button>
     </div>
 </section>
-
-      <section class="section-benefits section">
+    <section class="section-benefits section">
   <div class="container">
     <!-- Title-->
     <div class="benefits-title-container">
@@ -371,7 +383,7 @@
   </div>
 </section>
 
-      <section class="section-faq section">
+    <section class="section-faq section">
   <div class="container faq-container">
     <div class="faq-title-container">
       <h2 class="faq-title">
@@ -492,7 +504,7 @@
   </div>
 </section>
 
-      <section class="reviews section">
+    <section class="reviews section">
   <div class="container reviews-container">
     <h2 class="reviews-title">reviews</h2>
 
@@ -521,7 +533,61 @@
   </div>
 </section>
 
-      <div class="modal-overlay" id="modal-overlay">
+    <section class="section-together section" id="contacts">
+  <div class="container work-together-container">
+    <div class="work-together-section-left">
+      <h2 class="section-title work-together-title">
+        let’s
+        <span class="span text-split letters-fade-in-random">work together</span>
+      </h2>
+      <div class="work-together-decor"></div>
+      <p class="work-together-text">
+        Contact me to transform your ideas into exceptional solutions.
+      </p>
+      <ul class="work-together-list">
+        <li class="work-together-item">
+          <!-- SVG phone -->
+          <svg class="work-together-icon" width="20" height="20">
+            <use href="/fullstack-portfolio-goit/assets/icons-BMAn3I_a.svg#icon-phone"></use>
+          </svg>
+          <a href="tel:+380904567890" class="link-hover work-together-link">+38 090 456 78 90</a>
+        </li>
+        <li class="work-together-item">
+          <!-- SVG mail -->
+          <svg class="work-together-icon" width="20" height="20">
+            <use href="/fullstack-portfolio-goit/assets/icons-BMAn3I_a.svg#icon-mail"></use>
+          </svg>
+          <a href="mailto:lloydjefferson@gmail.com" class="link-hover work-together-link">lloydjefferson@gmail.com</a>
+        </li>
+        <li class="work-together-item">
+          <!-- SVG location-->
+          <svg class="work-together-icon" width="20" height="20">
+            <use href="/fullstack-portfolio-goit/assets/icons-BMAn3I_a.svg#icon-location"></use>
+          </svg>
+          <a href="#" class="link-hover work-together-link">USA, New York</a>
+        </li>
+      </ul>
+    </div>
+    <div class="work-together-section-right">
+      <form class="work-together-form">
+        <input class="work-together-input" name="email" type="email" placeholder="Your email*"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" id="enter-email" autocomplete="email" />
+        <label for="enter-email" class="visually-hidden">Enter email</label>
+        <!-- SVG success -->
+        <svg class="work-together-success" width="14" height="14">
+          <use href="img/sprite.svg#icon-success"></use>
+        </svg>
+        <p class="work-together-errorInput">Invalid email, try again</p>
+        <textarea class="work-together-message" name="message" placeholder="Message" minlength="10"
+          id="enter-message"></textarea>
+        <label for="enter-message" class="visually-hidden">Enter message</label>
+        <p class="work-together-errorMessage">The field must be filled</p>
+        <button class="work-together-submit" type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+  </div>
+</section>
+    <div class="modal-overlay" id="modal-overlay">
     <div class="modal">
       <button type="button" class="close-button modal-close-btn" id="modal-close-btn">
         <svg class="close-icon" width="32" height="32"> 
@@ -535,90 +601,9 @@
       </p>
     </div>
   </div>
-      <section class="section-together section" id="contacts">
-  <div class="container work-together-container">
-    <div class="work-together-section-left">
-      <h2 class="section-title work-together-title">
-        let’s
-        <span class="span text-split letters-fade-in-random"
-          >work together</span
-        >
-      </h2>
-      <div class="work-together-decor"></div>
-      <p class="work-together-text">
-        Contact me to transform your ideas into exceptional solutions.
-      </p>
-      <ul class="work-together-list">
-        <li class="work-together-item">
-          <!-- SVG phone -->
-          <svg class="work-together-icon" width="20" height="20">
-            <use href="/fullstack-portfolio-goit/assets/icons-BMAn3I_a.svg#icon-phone"></use>
-          </svg>
-          <a href="tel:+380904567890" class="link-hover work-together-link"
-            >+38 090 456 78 90</a
-          >
-        </li>
-        <li class="work-together-item">
-          <!-- SVG mail -->
-          <svg class="work-together-icon" width="20" height="20">
-            <use href="/fullstack-portfolio-goit/assets/icons-BMAn3I_a.svg#icon-mail"></use>
-          </svg>
-          <a
-            href="mailto:lloydjefferson@gmail.com"
-            class="link-hover work-together-link"
-            >lloydjefferson@gmail.com</a
-          >
-        </li>
-        <li class="work-together-item">
-          <!-- SVG location-->
-          <svg class="work-together-icon" width="20" height="20">
-            <use href="/fullstack-portfolio-goit/assets/icons-BMAn3I_a.svg#icon-location"></use>
-          </svg>
-          <a href="#" class="link-hover work-together-link">USA, New York</a>
-        </li>
-      </ul>
-    </div>
-    <div class="work-together-section-right">
-      <form class="work-together-form">
-        <input
-          class="work-together-input"
-          name="email"
-          type="email"
-          placeholder="Your email*"
-          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-          id="enter-email"
-          autocomplete="email"
-        />
-        <label for="enter-email" class="visually-hidden">Enter email</label>
-        <!-- SVG success -->
-        <svg class="work-together-success" width="14" height="14">
-          <use href="img/sprite.svg#icon-success"></use>
-        </svg>
-        <p class="work-together-errorInput">Invalid email, try again</p>
-        <textarea
-          class="work-together-message"
-          name="message"
-          placeholder="Message"
-          minlength="10"
-          id="enter-message"
-        ></textarea>
-        <label for="enter-message" class="visually-hidden">Enter message</label>
-        <p class="work-together-errorMessage">The field must be filled</p>
-        <button class="work-together-submit" type="submit">SEND MESSAGE</button>
-      </form>
-    </div>
-  </div>
-</section>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
+  </main>
 
-
-    </main>
-
-    <footer class="footer">
+  <footer class="footer">
   <div class="container container-footer">
     <div class="footer-content">
       <div class="footer-logo">
@@ -651,7 +636,7 @@
   </div>
 </footer>
 
-  
+  <script src="./dark-theme.js"></script>
+</body>
 
-  </body>
 </html>
