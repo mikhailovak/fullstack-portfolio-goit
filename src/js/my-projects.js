@@ -102,19 +102,15 @@ function renderProjects(start, end) {
         imgCard.classList.add('gallery-project-item');
         imgCard.innerHTML = `      
             <img src="${project.img}" srcset="${project.img} 1x, ${project.srcset} 2x" alt="${project.name}" loading="lazy" class="img-projects">    
-            <div class="info-projects">
-                <p class="technology-projects">${project.technology}</p>
+            <p class="technology-projects">${project.technology}</p>
+            <div class="projects-text-btn">
                 <h3 class="project-name">${project.name}</h3>
-            </div>
-            <a href="https://mikhailovak.github.io/fullstack-portfolio-goit/" target="_blank" class="gallery-project-link">
-                <div class="visit-container">
-                    <button class="visit-btn" type="button">Visit
-                        <svg class="svg-projects" width="22" height="22">
+                <a href="https://mikhailovak.github.io/fullstack-portfolio-goit/" target="_blank" class="gallery-project-link">Visit
+                    <svg class="svg-projects" width="22" height="22">
                         <use href="${icon}#icon-arrow-diagonal"></use>
-                        </svg>
-                    </button>
-                </div>
-            </a>
+                    </svg>
+                </a>
+            </div>
         `;
         fragment.appendChild(imgCard);
     }
