@@ -44,17 +44,32 @@
 }
 
 .faq-item-title {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.6;
+  display: flex; /* Добавлено */
+  gap: 16px; /* Добавлено */
+  justify-content: space-between; /* Добавлено */
+  align-items: center; /* Добавлено */
+  text-align: left; /* Добавлено */
+  width: 100%; /* Добавлено */
+  border: none; /* Добавлено */
+  padding: 0; /* Добавлено */
+  font-family: 'Poppins', sans-serif; /* Добавлено */
+  line-height: 1.6; /* Изменено */
   letter-spacing: 0.03em;
+  text-transform: uppercase; /* Добавлено */
+  color: #292929; /* Добавлено */
+  font-size: 18px;
+  font-weight: 400;
+  background-color: transparent; /* Добавлено */
   max-width: 224px;
 }
 
 .faq-item-answer {
+  font-family: 'Poppins', sans-serif; /* Добавлено */
+  font-weight: 300; /* Добавлено */
+  font-size: 16px; /* Добавлено */
+  line-height: 1.5; /* Добавлено */
   letter-spacing: 0.03em;
   color: #292929;
-
   margin-top: 24px;
 }
 
@@ -92,9 +107,9 @@
 }
 
 @media (max-width: 1279px) {
-    .faq-image {
-        display: none;
-    }
+  .faq-image {
+    display: none;
+  }
 }
 
 @media (min-width: 1280px) {
