@@ -92,6 +92,11 @@ div.swiper-button-next {
   right: 0;
 }
 
+div.swiper-button-prev:hover, div.swiper-button-next:hover {
+  background-color: #e4e5e6;
+  transition: transform 0.5s ease-in-out;
+}
+
 div.swiper-button-next:after,
 div.swiper-button-prev:after {
   content: '';

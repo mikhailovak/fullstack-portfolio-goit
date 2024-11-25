@@ -347,6 +347,17 @@ body.dark-theme {
   background: #2a2d32;
 }
 
+.dark-theme .reviews-navigation-prev-icon,
+.dark-theme .reviews-navigation-icon {
+  stroke: #f0f0f0 !important;
+  fill: #f0f0f0;
+
+}
+
+.dark-theme .swiper-button-prev:hover, .dark-theme .swiper-button-next:hover {
+background-color: #2a2d32;
+}
+
 /* WORK-TRG */
 .dark-theme .work-together-link {
   color: currentColor;
