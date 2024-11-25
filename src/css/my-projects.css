@@ -1,7 +1,6 @@
 .projects {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin: 0;
-  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,11 +38,28 @@
   height: 184px;
 }
 
-.info-projects {
-  margin-top: 12px;
+.gallery-project-link {
+  width: 125px;
+  height: 48px;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: lightgrey;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #292929;
+  transition: 0.5s;
+}
+
+.projects-text-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
 }
 
 .technology-projects {
@@ -58,39 +74,11 @@
   color: #292929;
   max-width: 320px;
   text-transform: uppercase;
-    max-width: 320px;
 }
 
-.visit-container {
-  margin-top: 16px;
-  display: flex;
-  align-items: end;
-  justify-content: end;
-}
-
-.visit-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  border-radius: 8px;
-  padding: 12px 24px;
-  width: 125px;
-  height: 48px;
-  background-color: lightgray;
-  border: 0;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.03em;
-  color: #292929;
-  transition: 0.5s;
-}
-
-.visit-btn:hover {
+.gallery-project-link:hover {
   background-color: gray;
-}
+} 
 
 .load-btn-projects {
   margin: 0 auto;
@@ -117,6 +105,16 @@
   color: #00b068;
 }
 
+@media screen and (max-width: 767px) {
+  .projects-text-btn {
+    display: block;
+  }
+  .gallery-project-link {
+    margin-top: 12px;
+    margin-left: auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .projects {
     font-size: 108px;
@@ -136,11 +134,6 @@
     height: 404px;
   }
 
-  .info-projects {
-    margin-top: 16px;
-    gap: 20px;
-  }
-
   .project-name {
     max-width: 547px;
     font-size: 36px;
@@ -148,8 +141,8 @@
     letter-spacing: 0.01em;
   }
 
-  .visit-container {
-    margin-top: -48px;
+  .projects-text-btn {
+    margin-top: 20px;
   }
 }
 
