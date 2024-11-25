@@ -1,3 +1,6 @@
+'use strict';
+import axios from 'axios';
+import iziToast from 'izitoast';
 
 import './js/my-projects';
 import './js/reviews';
