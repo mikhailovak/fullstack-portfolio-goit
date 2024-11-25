@@ -23,7 +23,6 @@
 .faq-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .faq-item {
@@ -115,6 +114,7 @@
 @media (min-width: 1280px) {
   .faq-container {
     display: flex;
+    justify-content: space-between;
   }
 
   .faq-title-container {
@@ -125,11 +125,11 @@
 
   .faq-title {
     max-width: 560px;
+    margin-bottom: 0;
   }
 
   .faq-list {
     max-width: 600px;
-    margin-left: auto;
-    padding-top: 338px;
+    margin-top: 338px;
   }
 }

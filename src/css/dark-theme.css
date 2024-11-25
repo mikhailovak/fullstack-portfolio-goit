@@ -152,13 +152,11 @@ body.dark-theme {
 
 /* Стили для переключателя */
 .switch {
-  position: relative;
   width: 48px;
   height: 24px;
   display: flex; /* Включаем Flexbox */
   align-items: center; /* Вертикальное выравнивание по центру */
   justify-content: center; /* Горизонтальное выравнивание по центру */
-  margin: 0 auto;
 }
 
 .switch input {
