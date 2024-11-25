@@ -12,6 +12,10 @@
   content: '' !important;
 }
 
+.ac .ac-trigger:focus {
+    color: #292929 !important;
+}
+
 .faq-title {
   margin-bottom: 40px;
 }
