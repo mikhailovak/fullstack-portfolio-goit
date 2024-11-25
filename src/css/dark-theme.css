@@ -252,7 +252,7 @@ body.dark-theme {
 }
 
 /* HERO */
-.dark-theme .hero-link-element {
+.dark-theme .hero-link::after {
   background-color: var(--hero-link-color);
 }
 
