@@ -18,11 +18,10 @@
 }
 
 .hero-title {
-  margin-bottom: 72px;
+  margin-bottom: 40px;
 }
 
 .hero-link {
-  margin-bottom: 72px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -38,7 +37,7 @@
   z-index: -1;
   position: absolute;
   border-radius: 16px;
-  transition: transform 0.5s ease-in-out, background-color 0.2s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   transform: translateX(0);
 }
 
@@ -100,6 +99,10 @@
     background-position: top -3px left 37px;
     padding-bottom: 62px;
   }
+
+    .hero-title {
+      margin-bottom: 60px;
+    }
 
   .hero-wrapper {
     margin-bottom: 80px;
@@ -164,6 +167,10 @@
   .hero {
     background-image: url(/img/hero/hero-bg-desktop.png);
   }
+
+    .hero-title {
+      margin-bottom: 80px;
+    }
 
   .hero-link-element {
     left: 12.5%;
