@@ -36,6 +36,7 @@ const createReviewItem = ({ author, avatar_url, review }) => `
   </li>
 `;
 
+
 const loadReviews = async () => {
   try {
     reviews = await fetchReviews();
@@ -80,7 +81,6 @@ const loadReviews = async () => {
       breakpoints: {
         1200: {
           slidesPerView: 2,
-          spaceBetween: 20,
           slidesPerGroup: 2,
         },
       },
@@ -107,3 +107,4 @@ const loadReviews = async () => {
 };
 
 window.addEventListener('DOMContentLoaded', loadReviews);
+
