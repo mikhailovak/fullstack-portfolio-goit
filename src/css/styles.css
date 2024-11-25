@@ -22,5 +22,7 @@
 @import url('./work-tgr.css');
 @import url('./footer.css');
 @import url('./modal.css');
+/* Import dark theme styles */
+@import url('./dark-theme.css');
 
 
