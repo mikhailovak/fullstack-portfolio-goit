@@ -1,12 +1,15 @@
 .hero {
-  padding-top: 176px;
+  /* padding-top: 176px; */
   position: relative;
-  background-image: url(/img/mobile-background.png);
-  background-repeat: no-repeat;
-  background-position: top 80px left 16px;
-  background-size: auto;
-  padding-bottom: 40px;
   max-width: 100%;
+}
+
+.hero-container {
+  padding-top: 176px;
+  background-image: url(/img/mobile-background.png);
+    background-repeat: no-repeat;
+    background-position: top 80px left 16px;
+    background-size: auto;
 }
 
 .hero-avatar {
@@ -15,6 +18,9 @@
 
 .hero-wrapper {
   margin-bottom: 72px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
 }
 
 .hero-title {
@@ -26,6 +32,8 @@
   align-items: center;
   gap: 12px;
   position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .hero-link::after {
@@ -91,18 +99,22 @@
 
 @media (min-width: 768px) {
   .hero {
-    padding-top: 184px;
+    /* padding-top: 184px; */
     position: relative;
-    background-image: url(/img/hero/hero-bg-tablet.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: top -3px left 37px;
-    padding-bottom: 62px;
+    
   }
 
-    .hero-title {
-      margin-bottom: 60px;
-    }
+  .hero-container {
+    padding-top: 184px;
+    background-image: url(/img/hero/hero-bg-tablet.png);
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: top 105px left 33px;
+  }
+
+  .hero-title {
+    margin-bottom: 60px;
+  }
 
   .hero-wrapper {
     margin-bottom: 80px;
@@ -152,25 +164,29 @@
   .hero-soc-links-container {
     flex-direction: row !important;
     align-items: baseline;
+    padding: 40px 0px !important;
+    gap: 40px !important;
   }
 
-  .hero-soc-links-bcg {
+  /* .hero-soc-links-bcg {
     height: 104px;
-  }
+  } */
 
-  .hero-soc-links-container {
-    gap: 40px;
-  }
 }
 
 @media (min-width: 1280px) {
   .hero {
-    background-image: url(/img/hero/hero-bg-desktop.png);
+    /* background-image: url(/img/hero/hero-bg-desktop.png); */
   }
 
-    .hero-title {
-      margin-bottom: 80px;
-    }
+  .hero-container {
+    background-image: url(/img/hero/hero-bg-desktop.png);
+    background-position: top 5px left 0;
+  }
+
+  .hero-title {
+    margin-bottom: 80px;
+  }
 
   .hero-link-element {
     left: 12.5%;
@@ -186,6 +202,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 
   .hero-text {
