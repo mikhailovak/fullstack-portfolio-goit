@@ -16,13 +16,6 @@ const modalTitle = document.querySelector('.modal-title'); // заголовок
 const modalText = document.querySelector('.modal-message'); // текст у модальному вікні
 const modalCloseBtn = document.getElementById('modal-close-btn');
 
-// Відкриває/закриває модальне вікно
-const toggleModal = isOpen => {
-  backdrop.classList.toggle('active', isOpen);
-  document.body.style.overflow = isOpen ? 'hidden' : 'auto';
-};
-
-
 // Показує повідомлення про помилку
 const showError = (element, message = '') => {
   element.style.display = 'block'; // робить елемент видимим
@@ -64,12 +57,23 @@ input.addEventListener('input', validateEmail);
 // Закриває модальне вікно при кліку на кнопку закриття
 close.addEventListener('click', () => toggleModal(false));
 
-// Закриває модальне вікно при натисканні Escape
+// Обробник клавіші Escape
 window.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && backdrop.classList.contains('is-open')) {
+  if (e.key === 'Escape' && backdrop.classList.contains('active')) {
     toggleModal(false);
   }
 });
+
+// Функція відкриття/закриття модального вікна
+const toggleModal = isOpen => {
+  if (isOpen) {
+    backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  } else {
+    backdrop.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+};
 
 // Закриває модальне вікно при кліку на фон (backdrop)
 backdrop.addEventListener('click', e => {
@@ -99,8 +103,6 @@ form.addEventListener('submit', async e => {
 
   if (hasError) return; // якщо є помилки, виходить із функції
 
-  toggleLoader(true); // показує індикатор завантаження
-
   try {
     // Відправляє POST-запит на сервер
     const response = await fetch(
@@ -120,7 +122,6 @@ form.addEventListener('submit', async e => {
 
     const data = await response.json(); // отримує дані з відповіді
 
-    toggleLoader(false); // приховує індикатор завантаження
     toggleModal(true); // відкриває модальне вікно
 
     modalTitle.textContent = data?.title || 'Success'; // оновлює заголовок модального вікна
@@ -128,8 +129,6 @@ form.addEventListener('submit', async e => {
       data?.message || 'Your message has been sent successfully!'; // оновлює текст у модальному вікні
     resetForm(); // скидає форму
   } catch (error) {
-    toggleLoader(false); // приховує індикатор завантаження
-
     alert(`Error: ${error.message}`); // показує повідомлення про помилку
   }
 });
