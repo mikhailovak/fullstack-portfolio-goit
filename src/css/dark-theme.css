@@ -2,7 +2,6 @@
   --font-poppins: 'Poppins', sans-serif;
   --font-montserrat: 'Montserrat', sans-serif;
   --font-impact: 'Impact', sans-serif;
-
   --color-black: #292929;
   --color-accent-green: #00b068;
   --color-white: #f0f0f0;
@@ -11,64 +10,48 @@
   --color-hover-green: #009156;
   --color-error: #e74a3b;
   --color-hover-grey: #bbbbbb;
-
   --text-dark: #000;
   --bg-light: #fff;
   --text-light: #fff;
   --accent-color: #00b068;
-
   --background-color: black;
   --text-color: white;
-  --button-color: white; /* Цвет кнопки */
-  --button-background-color: #1e2023; /* Фон кнопки */
-
-  --hero-link-color: #00b068; /* Определите переменную цвета */
+  --button-color: white;
+  --button-background-color: #1e2023;
+  --hero-link-color: #00b068;
   --placeholder-color: #292929;
   --dark-placeholder-color: #f0f0f0;
-
-  /* Desktop-Tablet */
   --h1-desktop-font-size: 136px;
   --h1-desktop-line-height: 1.15;
   --h1-desktop-letter-spacing: 0.013em;
-
   --h2-desktop-font-size: 108px;
   --h2-desktop-line-height: 1.15;
   --h2-desktop-letter-spacing: 0.016em;
-
   --h3-desktop-font-size: 36px;
   --h3-desktop-line-height: 1.33;
   --h3-desktop-letter-spacing: 0.01em;
-
   --body1-desktop-font-size: 16px;
   --body1-desktop-line-height: 1.5;
   --body1-desktop-letter-spacing: 0.1em;
-
   --body2-desktop-font-size: 20px;
   --body2-desktop-line-height: 1.6;
   --body2-desktop-letter-spacing: 0.025em;
-
-  /* Mobile */
   --h1-mobile-font-size: 64px;
   --h1-mobile-line-height: 1.25;
   --h1-mobile-letter-spacing: 0.03em;
-
   --h2-mobile-font-size: 52px;
   --h2-mobile-line-height: 1.23;
   --h2-mobile-letter-spacing: 0.03em;
-
   --h3-mobile-font-size: 32px;
   --h3-mobile-line-height: 1.25;
   --h3-mobile-letter-spacing: 0.015em;
-
   --body1-mobile-font-size: 16px;
   --body1-mobile-line-height: 1.5;
   --body1-mobile-letter-spacing: 0.1em;
-
   --body2-mobile-font-size: 18px;
   --body2-mobile-line-height: 1.55;
   --body2-mobile-letter-spacing: 0.027em;
 }
-
 body {
   font-family: var(--font-poppins);
   background: var(--bg-light);
@@ -80,14 +63,12 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-
 body.dark-theme {
   background-color: #1e2023;
   color: var(--text-light);
+  transition: background-color 0.1s, color 0.1s;
 }
 
-
-/* Пример того, как применять темную тему к элементам */
 .dark-theme,
 .dark-theme h1,
 .dark-theme h2,
@@ -113,58 +94,45 @@ body.dark-theme {
 .dark-theme .ac-item,
 .dark-theme .modal {
   color: var(--text-light);
+  transition: color 0.1s, background-color 0.1s;
 }
 
-/* Стили для переключателя темной темы */
 .dark-theme .switch label::before {
   background-color: var(--text-light);
 }
-
 .dark-theme .switch input:checked + label {
   background-color: var(--background-color);
 }
-
 .dark-theme .fa-sun,
 .dark-theme .fa-moon {
   color: var(--text-light);
 }
-
 .dark-theme .header,
 .dark-theme .header-nav,
 .dark-theme .header-logo,
-.dark-theme .header-nav-link {
-  /* background-color: var(--bg-dark); */
-  background-color: #1e2023;
-}
-
+.dark-theme .header-nav-link,
 .dark-theme .mobile-menu {
   background-color: #1e2023;
-  /* Фон для мобільного меню в темній темі */
 }
 
 .dark-theme .burger-btn {
   background-color: var(--bg-dark);
 }
-
 .dark-theme .burger-icon {
   fill: var(--color-white);
 }
-
-/* Стили для переключателя */
 .switch {
   position: relative;
   width: 48px;
   height: 24px;
-  display: flex; /* Включаем Flexbox */
-  align-items: center; /* Вертикальное выравнивание по центру */
-  justify-content: center; /* Горизонтальное выравнивание по центру */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
-
 .switch input {
   display: none;
 }
-
 .switch label {
   display: block;
   position: relative;
@@ -174,12 +142,10 @@ body.dark-theme {
   width: 48px;
   height: 24px;
   transition: background-color 0.2s;
-  display: flex; /* Включаем Flexbox */
-  align-items: center; /* Вертикальное выравнивание по центру */
-  justify-content: center; /* Горизонтальное выравнивание по центру */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* Кружок внутри переключателя */
 .switch label::before {
   content: '';
   position: absolute;
@@ -191,37 +157,26 @@ body.dark-theme {
   height: 20px;
   transition: transform 0.3s;
 }
-
-/* Изменение фона переключателя при активном состоянии */
 .switch input:checked + label {
   background-color: var(--background-color);
 }
-
-/* Перемещение кружка при активном состоянии */
 .switch input:checked + label::before {
   transform: translateX(21px);
   background-color: var(--color-accent-green);
 }
-
-/* Скрытие иконки солнца и отображение луны при активной темной теме */
 .switch input:checked + .label .fa-sun {
   display: none;
 }
-
 .switch input:checked + .label .fa-moon {
   display: block;
   justify-content: flex-end;
 }
-
-/* Отображение иконки солнца и скрытие луны при неактивной темной теме */
 .switch input:not(:checked) + .label .fa-sun {
   display: block;
 }
-
 .switch input:not(:checked) + .label .fa-moon {
   display: none;
 }
-
 .fa-sun,
 .fa-moon {
   font-size: 1.3rem;
@@ -230,34 +185,31 @@ body.dark-theme {
   transform: translateY(-50%) scale(0.7);
   transition: left 0.3s, right 0.3s;
 }
-
 .fa-sun {
-  left: 2px; /* Солнце слева по умолчанию */
+  left: 2px;
 }
-
 .fa-moon {
-  right: 6px; /* Луна справа по умолчанию */
-  display: none; /* Скрыта по умолчанию */
+  right: 6px;
+  display: none;
 }
-
 #switch:checked + .label .fa-sun {
-  left: auto; /* Убираем left */
-  right: 4px; /* Перемещаем солнце вправо */
+  left: auto;
+  right: 4px;
 }
-
 #switch:checked + .label .fa-moon {
-  left: 4px; /* Перемещаем луну влево */
-  right: auto; /* Убираем right */
-  display: block; /* Показываем луну */
+  left: 4px;
+  right: auto;
+  display: block;
 }
-
-/* HERO */
-.dark-theme .hero-link::after {
-  background-color: var(--hero-link-color);
+.dark-theme .hero-link:after {
+  background-color: #00b068;
+}
+.dark-theme .hero-link:active:after {
+  background-color: #14c57c;
 }
 
 .hero-soc-links-container {
-  padding: 32px 0px;
+  padding: 32px 0;
   background-color: #e4e5e6;
   display: flex;
   flex-direction: column;
@@ -265,137 +217,87 @@ body.dark-theme {
   align-items: center;
   gap: 24px;
 }
-
 .dark-theme .hero-soc-links-container {
-  background-color: #2a2d32; /* Фон меняется на #2a2d32 при включенной темной теме */
+  background-color: #2a2d32;
 }
-
 @media (min-width: 768px) {
   .dark-theme a {
     color: #f0f0f0;
   }
 }
-
-/* tech skills */
-
 .dark-theme .tech-one-background {
   z-index: 1;
   background-color: #204136;
 }
-
 .dark-theme .tech-two-background {
   z-index: 1;
   background-color: #2a2d32;
 }
-
 .dark-theme .tech-item-one {
-  color: #f0f0f0; /* Белый цвет текста */
+  color: #f0f0f0;
 }
-
 .dark-theme .tech-item-two {
   color: #14c57c;
 }
-
 .dark-theme .tech-item-two:not(:last-child)::after {
   background-color: #f0f0f0;
 }
-
-/* MY PROJECT */
 .dark-theme .project-text {
   color: #00b068;
 }
-.dark-theme .my-span {
-  color: #e4e5e6;
-}
-
-.dark-theme .visit-btn {
-  color: #e4e5e6;
-}
-
+.dark-theme .my-span,
+.dark-theme .visit-btn,
 .dark-theme .load-btn-projects {
   color: #e4e5e6;
 }
-
 .dark-theme .visit-btn {
   background: #2a2d32;
 }
-
-/* BENEFITS */
+.dark-theme .gallery-project-link {
+  background-color: #2a2d32;
+  color: #fff;
+}
 .dark-theme .benefits-icon-background {
   background: #204136;
 }
-
-/* faq */
-
 .dark-theme .faq-item.is-active {
   background: #204136;
 }
-
 .dark-theme .faq-item-title {
   color: #f0f0f0;
 }
-
 .dark-theme .ac {
   background-color: transparent;
 }
 .dark-theme .arrow-icon {
   stroke: #f0f0f0;
 }
-
-/* REVIEWS */
 .dark-theme .reviews-gallery-item {
   background: #2a2d32;
 }
-
 .dark-theme .reviews-navigation-prev-icon,
 .dark-theme .reviews-navigation-icon {
   stroke: #f0f0f0 !important;
   fill: #f0f0f0;
-
 }
-
-.dark-theme .swiper-button-prev:hover, .dark-theme .swiper-button-next:hover {
-background-color: #2a2d32;
+.dark-theme .swiper-button-prev:hover,
+.dark-theme .swiper-button-next:hover {
+  background-color: #2a2d32;
 }
-
-/* WORK-TRG */
 .dark-theme .work-together-link {
   color: currentColor;
 }
-
-.dark-theme .work-together-input {
-  background: #2a2d32;
-}
+.dark-theme .work-together-input,
 .dark-theme .work-together-message {
   background: #2a2d32;
 }
-
 .dark-theme .work-together-input::placeholder,
 .dark-theme .work-together-message::placeholder {
   color: var(--dark-placeholder-color);
 }
-
-/* footer */
 .dark-theme .bold {
   color: currentColor;
 }
-
-/* MOBILE MENU */
-
 .dark-theme .mobile-menu-container {
   background-color: #1e2023;
 }
-
-/* .dark-theme .mobile-menu {
-  align-items: center;
-}
-.dark-theme .modal-menu-head {
-  color: #f0f0f0;
-}
-.dark-theme .header-logo {
-  color: #f0f0f0;
-}
-
-.dark-theme .close-button {
-  color: #f0f0f0;
-} */
