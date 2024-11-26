@@ -218,6 +218,7 @@ div.swiper-button-prev:after {
 
   .swiper-wrapper {
     justify-content: start;
+    gap: 20px;
   }
   .reviews-navigation {
     justify-content: flex-end;
