@@ -5,10 +5,10 @@
 }
 
 .hero-container {
-  padding-top: 176px;
+  padding-top: 112px;
   background-image: url(/img/mobile-background.png);
     background-repeat: no-repeat;
-    background-position: top 80px left 16px;
+    background-position: top 40px left 49px;
     background-size: auto;
 }
 
@@ -105,11 +105,11 @@
   }
 
   .hero-container {
-    padding-top: 184px;
+    padding-top: 88px;
     background-image: url(/img/hero/hero-bg-tablet.png);
       background-repeat: no-repeat;
       background-size: auto;
-      background-position: top 105px left 33px;
+      background-position: top 33px left 33px;
   }
 
   .hero-title {
@@ -180,8 +180,9 @@
   }
 
   .hero-container {
+    padding-top: 184px;
     background-image: url(/img/hero/hero-bg-desktop.png);
-    background-position: top 5px left 0;
+    background-position: top 15px left 0;
   }
 
   .hero-title {
