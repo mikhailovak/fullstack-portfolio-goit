@@ -238,6 +238,15 @@ body.dark-theme {
   stroke: #f0f0f0; /* Белый цвет границы иконки */
   fill: #f0f0f0;
 }
+/* MOB MENU */
+.dark-theme .close-button {
+  color: #f0f0f0;
+}
+
+.dark-theme .close-button .close-icon {
+  stroke: #f0f0f0;
+  fill: #f0f0f0;
+}
 
 @media (min-width: 768px) {
   .dark-theme a {
