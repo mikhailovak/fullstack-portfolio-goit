@@ -105,7 +105,7 @@ function renderProjects(start, end) {
             <p class="technology-projects">${project.technology}</p>
             <div class="projects-text-btn">
                 <h3 class="project-name">${project.name}</h3>
-                <a href="https://mikhailovak.github.io/fullstack-portfolio-goit/" target="_blank" class="gallery-project-link">Visit
+                <a href="https://mikhailovak.github.io/fullstack-portfolio-goit/" target="_blank" rel="noopener noreferrer nofollow" class="gallery-project-link">VISIT
                     <svg class="svg-projects" width="22" height="22">
                         <use href="${icon}#icon-arrow-diagonal"></use>
                     </svg>
