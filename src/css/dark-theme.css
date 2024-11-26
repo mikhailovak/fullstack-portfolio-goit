@@ -218,6 +218,27 @@ body.dark-theme {
 .dark-theme .hero-soc-links-container {
   background-color: #2a2d32;
 }
+
+.dark-theme .modal {
+  background-color: #2a2d32;
+}
+
+.dark-theme .modal-title {
+  color: #00b068;
+}
+.dark-theme .modal-message {
+  color: #f0f0f0ff;
+}
+
+/* Стиль для кнопки закрытия при темной теме */
+.dark-theme .modal-close-btn {
+  color: #f0f0f0; /* Белый цвет текста */
+} /* Стиль для иконки внутри кнопки при темной теме */
+.dark-theme .modal-close-btn .close-icon {
+  stroke: #f0f0f0; /* Белый цвет границы иконки */
+  fill: #f0f0f0;
+}
+
 @media (min-width: 768px) {
   .dark-theme a {
     color: #f0f0f0;
