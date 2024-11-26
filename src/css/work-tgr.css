@@ -44,6 +44,7 @@
 }
 
 .work-together-form {
+  gap: 32px;
   display: grid;
   position: relative;
 }
@@ -77,7 +78,6 @@
 
 .work-together-input {
   padding: 12px;
-  margin-bottom: 32px;
 }
 
 .work-together-success {
@@ -91,10 +91,9 @@
 .work-together-message {
   height: 128px;
   padding: 16px;
-  margin-bottom: 32px;
 }
 
-/* Стандартные стили для плейсхолдеров */
+/* Standard styles for placeholders */
 .work-together-input::placeholder,
 .work-together-message::placeholder {
   color: var(--placeholder-color);
@@ -129,7 +128,7 @@
   margin-top: -28px;
 }
 
------------- LOADER ------- .work-together-loader {
+.work-together-loader {
   display: block;
   position: fixed;
   top: 50%;
