@@ -25,14 +25,14 @@ const fetchReviews = async () => {
 
 // Create the HTML for a single review slide
 const createReviewItem = ({ author, avatar_url, review }) => `
-  <li class="swiper-slide">
-    <div class="reviews-gallery-item">
+  <li class="swiper-slide reviews-gallery-item">
+    
       <p class="reviews-gallery-txt">${review}</p>
       <div class="gallery-item-person">
         <img src="${avatar_url}" alt="Avatar of ${author}" class="avatar" width="40" height="40">
         <h4>${author}</h4>
       </div>
-    </div>
+    
   </li>
 `;
 
@@ -75,7 +75,7 @@ const loadReviews = async () => {
       slidesPerView: 1,
       speed: 800,
       mousewheel: {
-        sensitivity: 5,
+        sensitivity: 1,
         EventsTarget: ".swiper"
       },
       breakpoints: {
