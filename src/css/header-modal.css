@@ -29,6 +29,7 @@
 .menu-modal-head {
     display: flex;
     align-items: center;
+    z-index: 1001;
 }
 
 .modal-menu-logo {
