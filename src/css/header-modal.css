@@ -7,8 +7,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 1);
-    z-index: 999;
-
+    z-index: 1001;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -20,26 +19,27 @@
 
 .mobile-menu.is-open {
     opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    visibility 0ms linear;
+        z-index: 1001;
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 0ms linear;
+        overflow: hidden;
 }
 
 .menu-modal-head {
-    display: flex;
-    align-items: center;
-    z-index: 1001;
+    position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        z-index: 1001;
 }
 
 .modal-menu-logo {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: black;
+    justify-content: space-between;
+        padding: 0 20px;
+        margin: 0 auto;
 }
 
 .close-icon {
@@ -48,26 +48,18 @@
 
 .close-button {
     margin-left: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0);
+        padding: 16px 0;
 }
 
 .mobile-menu-container {
     display: flex;
-    flex-direction: column;
     position: relative;
-    justify-content: center;
     background-image: url(/img/mobile-background.png);
     background-repeat: no-repeat;
-    max-width: 360px;
-    margin: 0;
     height: 100%;
-    max-height: 704px;
+    width: 100%;
     background-position: top 80px left -5px;
+    padding-top: 64px;
 }
 
 .mobile-menu-nav {
@@ -75,6 +67,8 @@
     align-items: center;
     margin: 0 auto;
     height: 100%;
+    justify-content: center;
+        width: 320px;
 }
 
 .menu-nav-list {
@@ -100,11 +94,6 @@
     color: #00B068;
 }
 
-@media screen and(min-width: 361px) {
-    .mobile-menu-container {
-        margin: 0 auto;
-    }
-}
 
 @media screen and (min-width: 768px) {
     .mobile-menu {
