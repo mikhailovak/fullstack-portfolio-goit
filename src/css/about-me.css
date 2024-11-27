@@ -12,7 +12,7 @@
   margin-left: 2px;
 }
 
-.one-line {
+.span {
   color: #00b068;
 }
 
@@ -135,6 +135,11 @@
     height: 124px;
   }
 
+  .picture-bio {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+  }
   .about-foto {
     width: 336px;
     height: 392px;
@@ -142,11 +147,8 @@
   }
 
   .about-bio {
-    position: absolute;
-    top: 164px;
-    left: 400px;
     width: 336px;
-    margin: 0;
+    margin-top: 40px;
   }
   .text-one {
     max-width: 336px;
@@ -187,6 +189,10 @@
     background-position: 855px 685px;
   }
 
+  .picture-bio {
+    gap: 136px;
+  }
+
   .about-foto {
     width: 384px;
     height: 448px;
@@ -195,8 +201,8 @@
   }
 
   .about-bio {
-    left: 760px;
     width: 488px;
+    margin-top: ;
   }
 
   .text-one {
