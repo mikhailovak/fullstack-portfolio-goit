@@ -50,35 +50,29 @@
   color: #292929;
 }
 
-.text-one {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.55;
-  letter-spacing: 0.03em;
-  color: #292929;
-  height: auto;
-  max-width: 100%;
-  margin-top: 32px;
-}
-
-.text-two {
+.bio-text {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 1.54;
-  letter-spacing: 0.03em;
   color: #292929;
-  margin-top: 24px;
-  height: auto;
-  max-width: 100%;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-top: 8px;
 }
+
+.bio-paragraph {
+  display: none;
+}
+.mobile-only {
+  margin-top: 24px;
+}
+
 .about-educ {
   margin-top: 40px;
 }
 
 .about-list {
   position: relative;
-  margin-top: 36px;
+  margin-top: 32px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -114,6 +108,12 @@
   margin-top: 32px;
 }
 
+@media (max-width: 767px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .about-section {
     max-width: 100%;
@@ -142,19 +142,15 @@
   }
 
   .about-bio {
+    display: flex;
     position: absolute;
     top: 164px;
     left: 400px;
     width: 336px;
     margin: 0;
   }
-  .text-one {
-    max-width: 336px;
-    line-height: 1.51;
-  }
 
-  .text-two {
-    max-width: 336px;
+  .tablet-only {
     margin-top: 24px;
   }
 
@@ -180,6 +176,11 @@
     left: 368px;
   }
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .tablet-only {
+    display: block;
+  }
+}
 
 @media screen and (min-width: 1280px) {
   .about-container {
@@ -199,14 +200,11 @@
     width: 488px;
   }
 
-  .text-one {
-    max-width: 488px;
-    height: 168px;
+  .desktop-only {
+    display: block;
   }
 
-  .text-two {
-    max-width: 488px;
-    height: 216px;
+  .desktop-only {
     margin-top: 24px;
   }
 
