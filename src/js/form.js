@@ -57,21 +57,23 @@ input.addEventListener('input', validateEmail);
 // Закриває модальне вікно при кліку на кнопку закриття
 close.addEventListener('click', () => toggleModal(false));
 
-// Обробник клавіші Escape
-window.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && backdrop.classList.contains('active')) {
+// Функція для обробки натискання клавіші Escape
+const handleEscape = e => {
+  if (e.key === 'Escape') {
     toggleModal(false);
   }
-});
+};
 
 // Функція відкриття/закриття модального вікна
 const toggleModal = isOpen => {
   if (isOpen) {
     backdrop.classList.add('active');
     document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleEscape); // Додаємо слухач для Escape
   } else {
     backdrop.classList.remove('active');
     document.body.style.overflow = 'auto';
+    window.removeEventListener('keydown', handleEscape); // Видаляємо слухач для Escape
   }
 };
 
