@@ -336,11 +336,6 @@
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.modal-close-btn:hover {
-  background-color: #008a53;
 }
 
 /* Відображення модального вікна */
