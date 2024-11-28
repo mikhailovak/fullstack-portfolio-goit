@@ -21,6 +21,7 @@
 
         if (targetSection) {
           refs.modal.classList.remove("is-open");
+          document.body.style.overflow = "";
 
           targetSection.scrollIntoView({
             behavior: "smooth",
@@ -32,6 +33,15 @@
   });
 
   function toggleModal() {
+    const isOpen = refs.modal.classList.contains("is-open");
+
     refs.modal.classList.toggle("is-open");
+
+    if (isOpen) {
+      document.body.style.overflow = "";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+
   }
 })();
