@@ -1,9 +1,17 @@
+.hero {
+  padding-top: 64px;
+}
+
 .hero-container {
+background-image: url(/img/mobile-background.png);
+  background-repeat: no-repeat;
+  background-position: top 18px left 0;
+  background-size: auto;
+}
+
+.hero-content {
   padding-top: 112px;
-  background-image: url(/img/mobile-background.png);
-    background-repeat: no-repeat;
-    background-position: top 40px left 49px;
-    background-size: auto;
+  padding-bottom: 72px;
 }
 
 .hero-avatar {
@@ -11,7 +19,7 @@
 }
 
 .hero-wrapper {
-  margin-bottom: 72px;
+  /* margin-bottom: 72px; */
   display: flex;
   gap: 40px;
   flex-direction: column;
@@ -19,6 +27,7 @@
 
 .hero-title {
   margin-bottom: 40px;
+  /* padding-top: 112px; */
 }
 
 .hero-link {
@@ -82,8 +91,17 @@
 }
 
 @media (min-width: 768px) {
+
+  .hero {
+    padding-top: 96px;
+  }
+
+    .hero-content {
+      padding-top: 88px;
+      padding-bottom: 80px;
+    }
+
   .hero-container {
-    padding-top: 88px;
     background-image: url(/img/hero/hero-bg-tablet.png);
       background-repeat: no-repeat;
       background-size: auto;
@@ -92,10 +110,11 @@
 
   .hero-title {
     margin-bottom: 60px;
+    /* padding-top: 88px; */
   }
 
   .hero-wrapper {
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
   }
 
   .hero-div-link {
@@ -142,8 +161,16 @@
 }
 
 @media (min-width: 1280px) {
-  .hero-container {
+
+  .hero {
+    padding-top: 96px;
+  }
+    .hero-content {
     padding-top: 184px;
+    padding-bottom: 132px;
+    }
+
+  .hero-container {
     background-image: url(/img/hero/hero-bg-desktop.png);
     background-position: top 15px left 0;
   }
@@ -162,7 +189,7 @@
   }
 
   .hero-wrapper {
-    margin-bottom: 132px;
+    /* margin-bottom: 132px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
