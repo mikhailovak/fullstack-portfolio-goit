@@ -14,8 +14,7 @@ let reviews = [];
 // Fetch reviews from the API
 const fetchReviews = async () => {
   try {
-    const response = await axios.get('https://portfolio-js.b.goit.study/api/reviews');
-    console.log('Fetched reviews:', response.data); 
+    const response = await axios.get('https://portfolio-js.b.goit.study/api/reviews'); 
     return response.data;
   } catch (error) {
     console.error('Error fetching reviews:', error);
@@ -46,13 +45,10 @@ const loadReviews = async () => {
       return;
     }
 
-    console.log('Adding reviews to the DOM...');
     reviews.forEach(review => {
       const reviewHTML = createReviewItem(review);
       reviewsGallery.insertAdjacentHTML('beforeend', reviewHTML);
     });
-
-    console.log('ReviewsGallery content:', reviewsGallery.innerHTML);
 
     swiper = new Swiper('.swiper', {
       direction: 'horizontal',
@@ -98,12 +94,9 @@ const loadReviews = async () => {
         },
       },
     });
-
-    console.log('Swiper initialized:', swiper);
   } catch (error) {
     alert('An error occurred while fetching reviews: ' + error.message); 
       reviewsGallery.innerHTML = '<p class="not-found">Not found</p>'; 
-    // The paragraph is in the specifications
   }
 };
 
