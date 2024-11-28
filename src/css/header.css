@@ -4,6 +4,9 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .header-nav {
@@ -20,8 +23,8 @@
 .header-logo,
 .burger-btn,
 .header-nav-link {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .burger-btn,
@@ -36,6 +39,11 @@
 }
 
 @media (min-width: 768px) {
+  .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
   .burger-btn {
     display: none;
   }
@@ -53,8 +61,8 @@
   .header-logo,
   .burger-btn,
   .header-nav-link {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   /* .theme-btn {
