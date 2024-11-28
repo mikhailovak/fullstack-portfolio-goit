@@ -2,8 +2,6 @@
 .footer {
   padding-top: 40px;
   padding-bottom: 24px;
-  display: flex;
-  flex-wrap: wrap;
   border-top: 1px solid #e4e5e6;
 }
 
