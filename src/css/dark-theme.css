@@ -324,6 +324,7 @@ body.dark-theme {
 .dark-theme .work-together-input,
 .dark-theme .work-together-message {
   background: #2a2d32;
+  color: #e4e5e6;
 }
 .dark-theme .work-together-input::placeholder,
 .dark-theme .work-together-message::placeholder {
