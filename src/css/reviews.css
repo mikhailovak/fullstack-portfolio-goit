@@ -12,9 +12,13 @@
   text-transform: uppercase;
 }
 
-li.swiper-slide {
+.swiper-wrapper {
   margin-bottom: 24px;
+}
+
+li.swiper-slide {
   margin-right: 0;
+  margin-bottom: 0;
   display: flex;
 }
 

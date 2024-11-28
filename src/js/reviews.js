@@ -82,6 +82,7 @@ const loadReviews = async () => {
         1200: {
           slidesPerView: 2,
           slidesPerGroup: 2,
+          spaceBetween: 32,
         },
       },
       on: {
